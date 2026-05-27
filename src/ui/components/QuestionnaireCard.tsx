@@ -11,7 +11,7 @@ interface QuestionnaireCardProps<T extends string> {
   title: string;
   description: string;
   options: QuestionOption<T>[];
-  selectedValue?: T;
+  selectedValue: T | undefined;
   onSelect: (value: T) => void;
 }
 

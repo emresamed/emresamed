@@ -19,7 +19,7 @@ export function RestTimerCard({
   onPause,
   onReset
 }: RestTimerCardProps) {
-  const progressWidth = `${Math.round(progress * 100)}%`;
+  const progressWidth = `${Math.round(progress * 100)}%` as `${number}%`;
 
   return (
     <View style={styles.card} accessibilityRole="summary" accessible>

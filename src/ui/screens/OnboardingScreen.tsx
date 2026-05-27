@@ -1,6 +1,15 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
-import { BODY_TYPES, GOALS, MuscleGroup, TRAINING_AGES, UserMetrics } from "../../domain/types";
+import {
+  BODY_TYPES,
+  BodyType,
+  GOALS,
+  Goal,
+  MuscleGroup,
+  TRAINING_AGES,
+  TrainingAge,
+  UserMetrics
+} from "../../domain/types";
 import { OnboardingStore } from "../../state/onboardingStore";
 import { MuscleGroupCard } from "../components/MuscleGroupCard";
 import { QuestionnaireCard } from "../components/QuestionnaireCard";
@@ -30,12 +39,19 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
   useEffect(() => store.subscribe(setState), [store]);
 
   const bodyTypeOptions = useMemo(
-    () => BODY_TYPES.map((bodyType) => ({ label: bodyType, value: bodyType })),
+    () => BODY_TYPES.map((bodyType) => ({ label: bodyType, value: bodyType as BodyType })),
     []
   );
-  const goalOptions = useMemo(() => GOALS.map((goal) => ({ label: goal, value: goal })), []);
+  const goalOptions = useMemo(
+    () => GOALS.map((goal) => ({ label: goal, value: goal as Goal })),
+    []
+  );
   const trainingAgeOptions = useMemo(
-    () => TRAINING_AGES.map((trainingAge) => ({ label: trainingAge, value: trainingAge })),
+    () =>
+      TRAINING_AGES.map((trainingAge) => ({
+        label: trainingAge,
+        value: trainingAge as TrainingAge
+      })),
     []
   );
   const daysOptions = useMemo(
@@ -70,7 +86,7 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
         </Text>
       </View>
 
-      <QuestionnaireCard
+      <QuestionnaireCard<BodyType>
         title="Body Type"
         description="Used for volume, intensity, and recovery adjustments."
         options={bodyTypeOptions}
@@ -78,7 +94,7 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
         onSelect={(value) => store.setBodyType(value)}
       />
 
-      <QuestionnaireCard
+      <QuestionnaireCard<Goal>
         title="Primary Goal"
         description="Determines rep ranges and compound/isolation ratio."
         options={goalOptions}
@@ -86,7 +102,7 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
         onSelect={(value) => store.setGoal(value)}
       />
 
-      <QuestionnaireCard
+      <QuestionnaireCard<TrainingAge>
         title="Training Experience"
         description="Matches exercise complexity with your skill level."
         options={trainingAgeOptions}
@@ -94,7 +110,7 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
         onSelect={(value) => store.setTrainingAge(value)}
       />
 
-      <QuestionnaireCard
+      <QuestionnaireCard<string>
         title="Training Days Per Week"
         description="Split templates are selected from this value."
         options={daysOptions}
