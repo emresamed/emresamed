@@ -1,7 +1,9 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { createClient } from "@supabase/supabase-js";
+import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 
 import { getRequiredEnvValue } from "@/config/env";
+import { secureStorage } from "@/services/supabase/secureStorage";
+
+let supabaseClient: SupabaseClient | null = null;
 
 export function createSupabaseClient() {
   return createClient(getRequiredEnvValue("supabaseUrl"), getRequiredEnvValue("supabaseAnonKey"), {
@@ -9,7 +11,13 @@ export function createSupabaseClient() {
       autoRefreshToken: true,
       detectSessionInUrl: false,
       persistSession: true,
-      storage: AsyncStorage
+      storage: secureStorage
     }
   });
+}
+
+export function getSupabaseClient() {
+  supabaseClient ??= createSupabaseClient();
+
+  return supabaseClient;
 }

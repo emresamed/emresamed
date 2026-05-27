@@ -1,16 +1,19 @@
-import { Dumbbell, Layers, Moon, Workflow } from "lucide-react-native";
+import { Dumbbell, Layers, Moon, ShieldCheck, Workflow } from "lucide-react-native";
 import { View } from "react-native";
 
 import { AppScreen } from "@/components/ui/AppScreen";
 import { AppText } from "@/components/ui/AppText";
+import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { colors } from "@/constants/colors";
+import { useAuthActions } from "@/features/auth/hooks/useAuthActions";
+import { useAuthSession } from "@/features/auth/hooks/useAuthSession";
 
 const foundationItems = [
   {
-    description: "Expo Router is ready for file-based screens and future protected route groups.",
+    description: "Expo Router now separates public auth routes from protected app screens.",
     icon: Workflow,
-    title: "Navigation shell"
+    title: "Protected navigation"
   },
   {
     description: "Theme tokens and NativeWind utilities keep the dark premium UI consistent.",
@@ -18,13 +21,21 @@ const foundationItems = [
     title: "Dark design system"
   },
   {
-    description: "Providers isolate server state, safe areas, gestures, and future app concerns.",
+    description: "Supabase session persistence is isolated behind services, hooks, and stores.",
+    icon: ShieldCheck,
+    title: "Secure auth boundary"
+  },
+  {
+    description: "Providers isolate server state, safe areas, gestures, session bootstrapping, and future app concerns.",
     icon: Layers,
     title: "Clean app boundary"
   }
 ] as const;
 
 export default function FoundationScreen() {
+  const { isLoading, signOut } = useAuthActions();
+  const { user } = useAuthSession();
+
   return (
     <AppScreen scrollable>
       <View className="gap-8">
@@ -39,11 +50,25 @@ export default function FoundationScreen() {
             </AppText>
             <AppText variant="heading">Build strong. Ship clean.</AppText>
             <AppText className="text-slate-300">
-              Phase 1 establishes the scalable Expo, TypeScript, routing, theme, store, and service
-              structure for the GymBro MVP.
+              Phase 2 adds secure authentication while keeping route files, form UI, state, and
+              Supabase calls separated.
             </AppText>
           </View>
         </View>
+
+        <Card elevated className="gap-3">
+          <AppText variant="title">Signed in</AppText>
+          <AppText className="text-slate-400">
+            {user?.email ?? "Your authenticated session is active."}
+          </AppText>
+          <Button
+            label="Sign out"
+            loading={isLoading}
+            onPress={() => signOut()}
+            variant="ghost"
+            className="mt-2"
+          />
+        </Card>
 
         <View className="gap-4">
           {foundationItems.map((item) => {

@@ -16,14 +16,29 @@ This phase creates the project foundation only:
 - Supabase service boundary
 - environment variable template
 
+## Phase 2 authentication
+
+This phase adds the MVP authentication system:
+
+- login screen
+- register screen
+- forgot password screen
+- Supabase email/password auth service
+- session bootstrap and persistence
+- protected app route group
+- reusable form input, button, and status-message components
+- auth hooks for session state and auth actions
+
+Supabase tokens are stored through an Expo SecureStore adapter on native platforms, with AsyncStorage as the web fallback.
+
 ## Folder structure
 
 ```txt
-app/                  Expo Router routes and layouts
-src/components/       Shared reusable UI components
+app/                  Expo Router routes, layouts, and auth/protected route groups
+src/components/       Shared reusable UI and form components
 src/config/           App configuration such as env and query client setup
 src/constants/        Design tokens and stable constants
-src/features/         Feature modules introduced phase-by-phase
+src/features/         Feature modules introduced phase-by-phase, including auth
 src/hooks/            Reusable cross-feature hooks
 src/navigation/       Route constants and navigation helpers
 src/providers/        App-level provider composition
@@ -42,4 +57,4 @@ cp .env.example .env
 npm run start
 ```
 
-Fill in `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` before implementing authentication.
+Fill in `EXPO_PUBLIC_SUPABASE_URL` and `EXPO_PUBLIC_SUPABASE_ANON_KEY` before using authentication against a live Supabase project.
