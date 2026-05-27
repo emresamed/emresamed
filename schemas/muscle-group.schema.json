@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://emresamed.local/schemas/muscle-group.schema.json",
+  "title": "MuscleGroup",
+  "description": "A top-level muscle group and its target zones plus weekly volume landmarks.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "target_zones", "weekly_volume_landmarks"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "enum": ["CHEST", "BACK", "SHOULDERS", "ARMS", "LEGS", "CORE"]
+    },
+    "name": { "type": "string", "minLength": 2, "maxLength": 40 },
+    "antagonist": {
+      "type": ["string", "null"],
+      "enum": ["CHEST", "BACK", "SHOULDERS", "ARMS", "LEGS", "CORE", null]
+    },
+    "target_zones": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "preferred_force"],
+        "properties": {
+          "id": { "type": "string" },
+          "display_name": { "type": "string" },
+          "preferred_force": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": ["PUSH", "PULL", "SQUAT", "HINGE", "LUNGE", "CARRY", "STATIC", "ROTATION"]
+            }
+          },
+          "stimulus_priority": {
+            "type": "array",
+            "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$" },
+            "description": "Ordered list of preferred exercise IDs for this zone."
+          }
+        }
+      }
+    },
+    "weekly_volume_landmarks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["MV", "MEV", "MAV", "MRV"],
+      "properties": {
+        "MV":  { "type": "integer", "minimum": 0, "maximum": 30 },
+        "MEV": { "type": "integer", "minimum": 0, "maximum": 30 },
+        "MAV": { "type": "integer", "minimum": 0, "maximum": 30 },
+        "MRV": { "type": "integer", "minimum": 0, "maximum": 30 }
+      }
+    }
+  }
+}

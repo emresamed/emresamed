@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://emresamed.local/schemas/user-profile.schema.json",
+  "title": "UserProfile",
+  "description": "Captured during onboarding; the single source of personalization input to generateWorkout().",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "user_id",
+    "metrics",
+    "body_type",
+    "goal",
+    "experience",
+    "days_per_week",
+    "available_equipment"
+  ],
+  "properties": {
+    "user_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "display_name": { "type": "string", "maxLength": 60 },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["height_cm", "weight_kg", "age", "sex"],
+      "properties": {
+        "height_cm": { "type": "number", "minimum": 120, "maximum": 230 },
+        "weight_kg": { "type": "number", "minimum": 35, "maximum": 250 },
+        "age":       { "type": "integer", "minimum": 14, "maximum": 90 },
+        "sex":       { "type": "string", "enum": ["M", "F", "OTHER"] }
+      }
+    },
+    "body_type": { "type": "string", "enum": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"] },
+    "goal":      { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"] },
+    "experience":{ "type": "string", "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED"] },
+    "days_per_week": { "type": "integer", "minimum": 2, "maximum": 6 },
+    "session_max_min": { "type": "integer", "minimum": 20, "maximum": 120, "default": 60 },
+    "preferred_split": {
+      "type": ["string", "null"],
+      "enum": ["FULL_BODY", "UPPER_LOWER", "PUSH_PULL_LEGS", "BRO_SPLIT", null]
+    },
+    "available_equipment": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "type": "string" },
+      "description": "Flat list resolved from an EquipmentKit; subset of data/enums.json#/Equipment."
+    },
+    "limitations": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "LOW_BACK_SENSITIVE", "KNEE_SENSITIVE", "SHOULDER_SENSITIVE",
+          "WRIST_SENSITIVE", "HIP_SENSITIVE", "NECK_SENSITIVE",
+          "PREGNANCY", "POST_SURGERY"
+        ]
+      },
+      "default": []
+    },
+    "prs": {
+      "type": "object",
+      "description": "Optional 1RM PRs in kg, keyed by Exercise.id.",
+      "additionalProperties": { "type": "number", "minimum": 0, "maximum": 500 },
+      "default": {}
+    },
+    "preferences": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "units":            { "type": "string", "enum": ["METRIC", "IMPERIAL"], "default": "METRIC" },
+        "rest_sound":       { "type": "boolean", "default": true },
+        "rest_haptic":      { "type": "boolean", "default": true },
+        "warmups_included": { "type": "boolean", "default": true }
+      }
+    }
+  }
+}

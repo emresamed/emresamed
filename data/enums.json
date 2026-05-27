@@ -1,0 +1,64 @@
+{
+  "$schema_meta": "Canonical enums consumed by every Stage 1 schema. Adding a value here requires re-running Agent 1.",
+  "seed_version_format": "semver",
+  "BodyType": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"],
+  "Goal": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"],
+  "Experience": ["BEGINNER", "INTERMEDIATE", "ADVANCED"],
+  "Sex": ["M", "F", "OTHER"],
+  "MuscleGroup": ["CHEST", "BACK", "SHOULDERS", "ARMS", "LEGS", "CORE"],
+  "TargetZone": [
+    "UPPER_CHEST", "MID_CHEST", "LOWER_CHEST",
+    "UPPER_TRAPS", "MID_BACK", "LATS_WIDTH", "LATS_THICKNESS", "LOWER_BACK",
+    "FRONT_DELT", "SIDE_DELT", "REAR_DELT",
+    "BICEPS_LONG", "BICEPS_SHORT", "BRACHIALIS",
+    "TRICEPS_LONG", "TRICEPS_LATERAL", "TRICEPS_MEDIAL",
+    "FOREARMS",
+    "QUADS", "HAMSTRINGS", "GLUTES", "ADDUCTORS", "CALVES",
+    "RECTUS_ABDOMINIS", "OBLIQUES", "TRANSVERSE", "LOWER_BACK_STAB"
+  ],
+  "Mechanics": ["COMPOUND", "ISOLATION"],
+  "Force": ["PUSH", "PULL", "SQUAT", "HINGE", "LUNGE", "CARRY", "STATIC", "ROTATION"],
+  "MovementPlane": ["SAGITTAL", "FRONTAL", "TRANSVERSE"],
+  "ROMPriority": ["PARTIAL", "FULL", "STRETCH_FOCUS"],
+  "SlotRole": [
+    "PRIMARY_COMPOUND",
+    "SECONDARY_COMPOUND",
+    "ACCESSORY_ISOLATION",
+    "FINISHER",
+    "CORE_FINISHER",
+    "CONDITIONING"
+  ],
+  "SplitType": ["FULL_BODY", "UPPER_LOWER", "PUSH_PULL_LEGS", "BRO_SPLIT"],
+  "Equipment": [
+    "BODYWEIGHT", "RESISTANCE_BAND", "PULL_UP_BAR",
+    "DUMBBELL", "KETTLEBELL", "BENCH", "DIP_BAR", "EZ_BAR",
+    "BARBELL", "RACK", "TRAP_BAR",
+    "CABLE", "SMITH_MACHINE",
+    "PLATE_LOADED_MACHINE", "SELECTORIZED_MACHINE",
+    "LEG_PRESS", "HACK_SQUAT", "LEG_CURL", "LEG_EXTENSION", "CALF_RAISE_MACHINE",
+    "LAT_PULLDOWN", "SEATED_ROW"
+  ],
+  "EquipmentKit": ["HOME_MINIMAL", "HOME_INTERMEDIATE", "HOME_ADVANCED", "COMMERCIAL_GYM", "CUSTOM"],
+  "Limitation": [
+    "LOW_BACK_SENSITIVE",
+    "KNEE_SENSITIVE",
+    "SHOULDER_SENSITIVE",
+    "WRIST_SENSITIVE",
+    "HIP_SENSITIVE",
+    "NECK_SENSITIVE",
+    "PREGNANCY",
+    "POST_SURGERY"
+  ],
+  "Contraindication": [
+    "HIGH_LUMBAR_LOAD",
+    "DEEP_KNEE_FLEXION",
+    "OVERHEAD_PRESSING",
+    "WRIST_HYPEREXTENSION",
+    "DEEP_HIP_FLEXION",
+    "CERVICAL_LOAD",
+    "VALSALVA_HEAVY",
+    "BALLISTIC"
+  ],
+  "Difficulty": ["BEGINNER", "INTERMEDIATE", "ADVANCED"],
+  "WeeklyVolumeLandmark": ["MV", "MEV", "MAV", "MRV"]
+}

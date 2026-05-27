@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://emresamed.local/schemas/workout-template.schema.json",
+  "title": "WorkoutTemplate",
+  "description": "A weekly program blueprint targeted at a specific body_type/goal/days_per_week combination. Slots are filled by Agent 3 using each slot's candidate_pool.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "split_type",
+    "days_per_week",
+    "target_body_type",
+    "target_goal",
+    "sessions"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9_]{2,79}$",
+      "description": "e.g. UL_MESO_HYPERTROPHY_4D."
+    },
+    "split_type": {
+      "type": "string",
+      "enum": ["FULL_BODY", "UPPER_LOWER", "PUSH_PULL_LEGS", "BRO_SPLIT"]
+    },
+    "days_per_week":   { "type": "integer", "minimum": 2, "maximum": 6 },
+    "target_body_type":{ "type": "string", "enum": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"] },
+    "target_goal":     { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"] },
+    "target_experience": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED"] },
+      "default": ["BEGINNER", "INTERMEDIATE", "ADVANCED"]
+    },
+    "mesocycle_weeks": { "type": "integer", "minimum": 3, "maximum": 8, "default": 4 },
+    "sessions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "name", "focus_groups", "slots"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "name":      { "type": "string", "minLength": 2, "maxLength": 40 },
+          "focus_groups": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "enum": ["CHEST","BACK","SHOULDERS","ARMS","LEGS","CORE"] }
+          },
+          "slots": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 10,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["slot_id", "role", "muscle_group", "candidate_pool"],
+              "properties": {
+                "slot_id": { "type": "integer", "minimum": 1 },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "PRIMARY_COMPOUND", "SECONDARY_COMPOUND",
+                    "ACCESSORY_ISOLATION", "FINISHER",
+                    "CORE_FINISHER", "CONDITIONING"
+                  ]
+                },
+                "muscle_group": {
+                  "type": "string",
+                  "enum": ["CHEST","BACK","SHOULDERS","ARMS","LEGS","CORE"]
+                },
+                "zone": {
+                  "type": ["string", "null"],
+                  "description": "Optional target_zone constraint."
+                },
+                "required_mechanics": {
+                  "type": ["string", "null"],
+                  "enum": ["COMPOUND", "ISOLATION", null]
+                },
+                "candidate_pool": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$" },
+                  "description": "Ordered list of Exercise.id values; rotated by week_index."
+                },
+                "superset_with_slot_id": {
+                  "type": ["integer", "null"],
+                  "description": "If set (and goal == FAT_LOSS), this slot is paired with another slot in the same session.",
+                  "default": null
+                },
+                "notes": { "type": "string", "maxLength": 200 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

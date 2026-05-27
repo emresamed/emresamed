@@ -1,0 +1,59 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://emresamed.local/schemas/session-log.schema.json",
+  "title": "SessionLog",
+  "description": "What the Active Workout Screen writes back per completed session. Feeds autoregulation rules in 01 §7.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["session_id", "user_id", "week_index", "day_index", "started_at", "exercise_logs"],
+  "properties": {
+    "session_id": { "type": "string", "minLength": 1, "maxLength": 64 },
+    "user_id":    { "type": "string", "minLength": 1, "maxLength": 64 },
+    "week_index": { "type": "integer", "minimum": 1, "maximum": 8 },
+    "day_index":  { "type": "integer", "minimum": 1, "maximum": 6 },
+    "started_at":   { "type": "string", "format": "date-time" },
+    "completed_at": { "type": ["string", "null"], "format": "date-time" },
+    "exercise_logs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["exercise_id", "slot_id", "sets"],
+        "properties": {
+          "exercise_id": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$" },
+          "slot_id":     { "type": "integer", "minimum": 1 },
+          "sets": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["set_index", "completed"],
+              "properties": {
+                "set_index":    { "type": "integer", "minimum": 1, "maximum": 8 },
+                "weight_kg":    { "type": ["number", "null"], "minimum": 0, "maximum": 500 },
+                "reps":         { "type": ["integer", "null"], "minimum": 0, "maximum": 50 },
+                "rpe":          { "type": ["integer", "null"], "minimum": 1, "maximum": 10 },
+                "rest_taken_s": { "type": ["integer", "null"], "minimum": 0, "maximum": 600 },
+                "completed":    { "type": "boolean" },
+                "failed":       { "type": "boolean", "default": false },
+                "notes":        { "type": "string", "maxLength": 200 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "post_session_feedback": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "soreness_target_group": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "perceived_effort":      { "type": "integer", "minimum": 0, "maximum": 10 },
+        "sleep_hours_last_night":{ "type": "number",  "minimum": 0, "maximum": 16 },
+        "mood":                  { "type": "string",  "enum": ["LOW", "OK", "HIGH"] }
+      }
+    }
+  }
+}

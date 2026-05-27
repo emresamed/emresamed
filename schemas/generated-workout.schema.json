@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://emresamed.local/schemas/generated-workout.schema.json",
+  "title": "GeneratedWorkout",
+  "description": "The deterministic output of generateWorkout(profile, seed, week_index). Consumed read-only by the UI (Agent 4).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["user_id", "week_index", "generated_from_template", "seed_version", "sessions"],
+  "properties": {
+    "user_id":   { "type": "string", "minLength": 1 },
+    "week_index":{ "type": "integer", "minimum": 1, "maximum": 8 },
+    "generated_from_template": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,79}$" },
+    "seed_version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "deload": { "type": "boolean", "default": false },
+    "sessions": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["day_index", "name", "exercises"],
+        "properties": {
+          "day_index": { "type": "integer", "minimum": 1, "maximum": 6 },
+          "name":      { "type": "string", "minLength": 2, "maxLength": 40 },
+          "estimated_duration_min": { "type": "integer", "minimum": 15, "maximum": 180 },
+          "exercises": {
+            "type": "array",
+            "minItems": 3,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "exercise_id", "slot_id", "role",
+                "sets", "rep_range", "target_rpe", "target_pct_1rm", "rest_seconds", "tempo"
+              ],
+              "properties": {
+                "exercise_id": { "type": "string", "pattern": "^[A-Z][A-Z0-9_]{2,63}$" },
+                "slot_id":     { "type": "integer", "minimum": 1 },
+                "role": {
+                  "type": "string",
+                  "enum": [
+                    "PRIMARY_COMPOUND", "SECONDARY_COMPOUND",
+                    "ACCESSORY_ISOLATION", "FINISHER",
+                    "CORE_FINISHER", "CONDITIONING"
+                  ]
+                },
+                "sets": { "type": "integer", "minimum": 1, "maximum": 8 },
+                "rep_range": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["min", "max"],
+                  "properties": {
+                    "min": { "type": "integer", "minimum": 1, "maximum": 25 },
+                    "max": { "type": "integer", "minimum": 1, "maximum": 25 }
+                  }
+                },
+                "target_rpe":     { "type": "integer", "minimum": 5, "maximum": 10 },
+                "target_pct_1rm": { "type": "integer", "minimum": 30, "maximum": 100 },
+                "target_weight_kg": {
+                  "type": ["number", "null"],
+                  "minimum": 0,
+                  "maximum": 500,
+                  "description": "Populated only when UserProfile.prs has a value for this exercise."
+                },
+                "rest_seconds":   { "type": "integer", "minimum": 20, "maximum": 360 },
+                "tempo": { "type": "string", "pattern": "^[0-9X]-[0-9X]-[0-9X]-[0-9X]$" },
+                "superset_with_slot_id": { "type": ["integer", "null"], "default": null },
+                "notes": { "type": "string", "maxLength": 240 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
