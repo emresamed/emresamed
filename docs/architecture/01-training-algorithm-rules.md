@@ -21,7 +21,6 @@
 | `STRENGTH` | 4–6 | 3–6 | 8–9 | 80–92 | 180–300 | `2-1-1-0` | Compound-heavy; low-rep top sets. |
 | `HYPERTROPHY` | 3–5 | 6–12 | 7–9 | 65–80 | 60–120 | `2-0-1-0` | Mixed compound/isolation; near-failure work sets. |
 | `ENDURANCE` | 2–4 | 12–20 | 6–8 | 50–65 | 30–60 | `1-0-1-0` | Higher density; minimal rest. |
-| `FAT_LOSS` | 3–4 | 10–15 | 7–8 | 55–70 | 30–45 | `2-0-1-0` | Supersets and circuit pairing encouraged. |
 
 ## 3. Body Type Modifiers (multiplicative / additive)
 
@@ -57,7 +56,7 @@ Source: Renaissance Periodization volume framework. `MV` = Maintenance, `MEV` = 
 
 **Targeting rule:** the weekly working-set sum for any muscle group must satisfy
 `MEV × volume_mult  ≤  weekly_sets  ≤  min(MRV, MAV × volume_mult × goal_volume_factor)`
-where `goal_volume_factor` is `0.80` for `STRENGTH`, `1.00` for `HYPERTROPHY`, `1.10` for `ENDURANCE`, `1.05` for `FAT_LOSS`.
+where `goal_volume_factor` is `0.80` for `STRENGTH`, `1.00` for `HYPERTROPHY`, `1.10` for `ENDURANCE`.
 
 ## 5. Final Per-Exercise Formula
 

@@ -2,7 +2,7 @@
   "$schema_meta": "Canonical enums consumed by every Stage 1 schema. Adding a value here requires re-running Agent 1.",
   "seed_version_format": "semver",
   "BodyType": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"],
-  "Goal": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"],
+  "Goal": ["STRENGTH", "HYPERTROPHY", "ENDURANCE"],
   "Experience": ["BEGINNER", "INTERMEDIATE", "ADVANCED"],
   "Sex": ["M", "F", "OTHER"],
   "MuscleGroup": ["CHEST", "BACK", "SHOULDERS", "ARMS", "LEGS", "CORE"],

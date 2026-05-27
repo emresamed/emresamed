@@ -89,7 +89,7 @@ When Agent 3 fills a `WorkoutTemplate` slot, it applies these filters **in this 
 
 No randomness is permitted in the core picker. Variation across weeks is achieved by rotating the candidate pool offset in `WorkoutTemplate.slot.candidate_pool` (Agent 2 supplies the rotation order; Agent 3 just iterates `pool[(week_index − 1) mod len(pool)]`).
 
-## 7. Antagonist Pairing Hints (used by `FAT_LOSS` supersets)
+## 7. Antagonist Pairing Hints (used by template supersets)
 
 | Pair Key | A | B |
 |---|---|---|
@@ -98,4 +98,4 @@ No randomness is permitted in the core picker. Variation across weeks is achieve
 | `BICEPS_TRICEPS` | `ARMS/BICEPS_*` | `ARMS/TRICEPS_*` |
 | `CHEST_BACK` | any `CHEST` zone | any `BACK` zone |
 
-When `goal == FAT_LOSS`, Agent 3 pairs accessory slots according to the table above; rest is taken **only between supersets**, not between A and B.
+Templates may opt into pairing by setting `WorkoutTemplate.slot.superset_with_slot_id`. When set, Agent 3 places the two slots back-to-back and only one rest period is honored (taken between the supersets, not between A and B).

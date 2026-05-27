@@ -14,7 +14,7 @@
 1. `data/exercises.seed.json` — array conforming to `schemas/exercise.schema.json`, **≥ 50 entries**, satisfying §4 coverage minimums for `HOME_INTERMEDIATE`, `HOME_ADVANCED`, and `COMMERCIAL_GYM` kits.
 2. `data/muscle-groups.seed.json` — array conforming to `schemas/muscle-group.schema.json`, exactly 6 entries (one per `MuscleGroup` enum value).
 3. `data/workout-templates.seed.json` — array conforming to `schemas/workout-template.schema.json`, providing at minimum:
-   - 3-day Full Body × `{ECTOMORPH, MESOMORPH, ENDOMORPH} × {STRENGTH, HYPERTROPHY, ENDURANCE, FAT_LOSS}`
+   - 3-day Full Body × `{ECTOMORPH, MESOMORPH, ENDOMORPH} × {STRENGTH, HYPERTROPHY, ENDURANCE}`
    - 4-day Upper/Lower × same matrix
    - 5-day & 6-day Push/Pull/Legs × same matrix
 4. `data/seed.meta.json` — `{ "seed_version": "1.0.0", "generated_at": "...", "exercise_count": N, "template_count": M }`.
@@ -100,7 +100,7 @@ function generateWorkout(profile, seed, week_index):
 
 **Must produce:**
 - Schema validation harness (Ajv/json_schema) that runs across all seed and generated artifacts.
-- Unit tests covering the full matrix `{3 body types} × {4 goals} × {3 experience levels}` = 36 fixtures for `generateWorkout`, asserting:
+- Unit tests covering the full matrix `{3 body types} × {3 goals} × {3 experience levels}` = 27 fixtures for `generateWorkout`, asserting:
   1. Output validates against `generated-workout.schema.json`.
   2. Volume landmarks in `01-training-algorithm-rules.md` §4 are satisfied for every muscle group present in the template.
   3. Compound ratio is respected.

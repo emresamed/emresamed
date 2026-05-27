@@ -29,7 +29,7 @@
       }
     },
     "body_type": { "type": "string", "enum": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"] },
-    "goal":      { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"] },
+    "goal":      { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE"] },
     "experience":{ "type": "string", "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED"] },
     "days_per_week": { "type": "integer", "minimum": 2, "maximum": 6 },
     "session_max_min": { "type": "integer", "minimum": 20, "maximum": 120, "default": 60 },

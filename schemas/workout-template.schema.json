@@ -25,7 +25,7 @@
     },
     "days_per_week":   { "type": "integer", "minimum": 2, "maximum": 6 },
     "target_body_type":{ "type": "string", "enum": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"] },
-    "target_goal":     { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE", "FAT_LOSS"] },
+    "target_goal":     { "type": "string", "enum": ["STRENGTH", "HYPERTROPHY", "ENDURANCE"] },
     "target_experience": {
       "type": "array",
       "uniqueItems": true,
@@ -89,7 +89,7 @@
                 },
                 "superset_with_slot_id": {
                   "type": ["integer", "null"],
-                  "description": "If set (and goal == FAT_LOSS), this slot is paired with another slot in the same session.",
+                  "description": "If set, this slot is paired (superset) with another slot in the same session; one rest period applies between pairs.",
                   "default": null
                 },
                 "notes": { "type": "string", "maxLength": 200 }

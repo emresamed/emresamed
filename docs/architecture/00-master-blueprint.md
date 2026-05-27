@@ -47,7 +47,7 @@ This folder contains the canonical specification that all downstream agents (Dat
 | Concept | Definition | Source of Truth |
 |---|---|---|
 | `BodyType` | `ECTOMORPH` \| `MESOMORPH` \| `ENDOMORPH` | `data/enums.json` |
-| `Goal` | `STRENGTH` \| `HYPERTROPHY` \| `ENDURANCE` \| `FAT_LOSS` | `data/enums.json` |
+| `Goal` | `STRENGTH` \| `HYPERTROPHY` \| `ENDURANCE` | `data/enums.json` |
 | `MuscleGroup` | `CHEST` \| `BACK` \| `SHOULDERS` \| `ARMS` \| `LEGS` \| `CORE` | `data/enums.json` |
 | `TargetZone` | Sub-region of a muscle group (e.g. `UPPER_CHEST`, `LATS_WIDTH`). Full list in `02-muscle-zone-map.md`. | `02-muscle-zone-map.md` |
 | `Mechanics` | `COMPOUND` \| `ISOLATION` | `data/enums.json` |
