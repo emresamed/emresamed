@@ -1,21 +1,21 @@
 import { create } from 'zustand';
-import { WorkoutSession, WorkoutExerciseLog, WorkoutSetLog } from '@/types';
+import { ActiveSession, ActiveExercise, ActiveSet } from '@/types';
 
 interface WorkoutState {
-  activeSession: WorkoutSession | null;
+  activeSession: ActiveSession | null;
   isSessionActive: boolean;
   elapsedSeconds: number;
 
   // Session lifecycle
-  startSession: (session: Omit<WorkoutSession, 'exercises'>) => void;
+  startSession: (session: Omit<ActiveSession, 'exercises'>) => void;
   endSession: () => void;
 
   // Exercise management
-  addExercise: (exercise: Omit<WorkoutExerciseLog, 'sets'>) => void;
+  addExercise: (exercise: Omit<ActiveExercise, 'sets'>) => void;
 
   // Set management
-  logSet: (exerciseId: string, set: WorkoutSetLog) => void;
-  updateSet: (exerciseId: string, setIndex: number, set: Partial<WorkoutSetLog>) => void;
+  logSet: (exerciseId: string, set: ActiveSet) => void;
+  updateSet: (exerciseId: string, setIndex: number, updates: Partial<ActiveSet>) => void;
 
   // Timer
   setElapsedSeconds: (seconds: number) => void;
@@ -44,16 +44,10 @@ export const useWorkoutStore = create<WorkoutState>((set, get) => ({
   addExercise: (exerciseData) => {
     const { activeSession } = get();
     if (!activeSession) return;
-
-    const newExercise: WorkoutExerciseLog = {
-      ...exerciseData,
-      sets: [],
-    };
-
     set({
       activeSession: {
         ...activeSession,
-        exercises: [...activeSession.exercises, newExercise],
+        exercises: [...activeSession.exercises, { ...exerciseData, sets: [] }],
       },
     });
   },
@@ -61,7 +55,6 @@ export const useWorkoutStore = create<WorkoutState>((set, get) => ({
   logSet: (exerciseId, newSet) => {
     const { activeSession } = get();
     if (!activeSession) return;
-
     set({
       activeSession: {
         ...activeSession,
@@ -74,10 +67,9 @@ export const useWorkoutStore = create<WorkoutState>((set, get) => ({
     });
   },
 
-  updateSet: (exerciseId, setIndex, updatedFields) => {
+  updateSet: (exerciseId, setIndex, updates) => {
     const { activeSession } = get();
     if (!activeSession) return;
-
     set({
       activeSession: {
         ...activeSession,
@@ -86,7 +78,7 @@ export const useWorkoutStore = create<WorkoutState>((set, get) => ({
             ? {
                 ...ex,
                 sets: ex.sets.map((s, i) =>
-                  i === setIndex ? { ...s, ...updatedFields } : s
+                  i === setIndex ? { ...s, ...updates } : s
                 ),
               }
             : ex
@@ -96,5 +88,6 @@ export const useWorkoutStore = create<WorkoutState>((set, get) => ({
   },
 
   setElapsedSeconds: (seconds) => set({ elapsedSeconds: seconds }),
-  incrementElapsed: () => set((state) => ({ elapsedSeconds: state.elapsedSeconds + 1 })),
+  incrementElapsed: () =>
+    set((state) => ({ elapsedSeconds: state.elapsedSeconds + 1 })),
 }));
