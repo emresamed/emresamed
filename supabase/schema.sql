@@ -1,0 +1,15 @@
+-- GymBro database schema reference
+--
+-- Apply migrations in order:
+--   1. supabase/migrations/001_initial_schema.sql
+--   2. supabase/migrations/002_rls_policies.sql
+--   3. supabase/migrations/003_seed_data.sql
+--
+-- Entity relationships:
+--
+--   auth.users ──1:1── public.users
+--   muscle_groups ──1:N── exercises
+--   workout_programs ──1:N── workout_days ──1:N── workout_exercises ──N:1── exercises
+--   users ──1:N── workout_logs ──1:N── workout_log_sets ──N:1── exercises
+--   users ──1:N── favorites ──N:1── exercises
+--   users ──1:N── user_progress
