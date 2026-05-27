@@ -1,31 +1,36 @@
-import { StyleSheet } from 'react-native';
+import { View } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
-import { Text, View } from '@/components/Themed';
+import { Card, Screen, Text } from '@/components/ui';
+import { APP_CONFIG } from '@/constants/config';
 
-export default function TabOneScreen() {
+export default function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
-    </View>
+    <Screen scrollable contentClassName="px-4 pt-4">
+      <View className="mb-6">
+        <Text variant="caption" className="uppercase tracking-widest text-primary">
+          Welcome back
+        </Text>
+        <Text variant="title" className="mt-1">
+          {APP_CONFIG.name}
+        </Text>
+        <Text variant="body" className="mt-2">
+          Your premium gym companion. Track workouts, explore programs, and crush your goals.
+        </Text>
+      </View>
+
+      <Card className="mb-4">
+        <Text variant="subtitle">Today&apos;s Focus</Text>
+        <Text variant="body" className="mt-2">
+          Foundation ready. Workout tracking arrives in Phase 5.
+        </Text>
+      </Card>
+
+      <Card>
+        <Text variant="subtitle">Quick Stats</Text>
+        <Text variant="body" className="mt-2">
+          Progress dashboards will appear here after data integration.
+        </Text>
+      </Card>
+    </Screen>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
-});
