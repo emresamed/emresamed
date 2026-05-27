@@ -35,6 +35,7 @@ const muscleGroups: MuscleGroup[] = ["chest", "back", "legs", "shoulders", "arms
 export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) {
   const [state, setState] = useState(store.getState());
   const [preferredMuscles, setPreferredMuscles] = useState<MuscleGroup[]>(["chest", "back"]);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   useEffect(() => store.subscribe(setState), [store]);
 
@@ -165,10 +166,23 @@ export function OnboardingScreen({ store, onCompleted }: OnboardingScreenProps) 
         </View>
       ) : null}
 
+      {submitError ? (
+        <View style={styles.errorBox}>
+          <Text style={styles.errorText}>• {submitError}</Text>
+        </View>
+      ) : null}
+
       <Pressable
         onPress={() => {
-          const metrics = store.complete();
-          onCompleted(metrics, preferredMuscles);
+          try {
+            setSubmitError(null);
+            const metrics = store.complete();
+            onCompleted(metrics, preferredMuscles);
+          } catch (error) {
+            setSubmitError(
+              error instanceof Error ? error.message : "Unexpected onboarding error occurred"
+            );
+          }
         }}
         style={styles.cta}
         accessibilityRole="button"

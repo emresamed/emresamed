@@ -4,7 +4,6 @@ import { WorkoutDayPlan } from "../../domain/types";
 interface SetCompletionState {
   exerciseId: string;
   setIndex: number;
-  checked: boolean;
 }
 
 export interface ActiveWorkoutSession {
@@ -27,17 +26,13 @@ export function useActiveWorkoutSession(dayPlan: WorkoutDayPlan): ActiveWorkoutS
 
   const toggleSet = useCallback((exerciseId: string, setIndex: number) => {
     setCompletedSets((prev) => {
-      const existing = prev.find(
+      const existingIndex = prev.findIndex(
         (entry) => entry.exerciseId === exerciseId && entry.setIndex === setIndex
       );
-      if (existing) {
-        return prev.map((entry) =>
-          entry.exerciseId === exerciseId && entry.setIndex === setIndex
-            ? { ...entry, checked: !entry.checked }
-            : entry
-        );
+      if (existingIndex >= 0) {
+        return prev.filter((_, index) => index !== existingIndex);
       }
-      return [...prev, { exerciseId, setIndex, checked: true }];
+      return [...prev, { exerciseId, setIndex }];
     });
   }, []);
 
@@ -54,7 +49,7 @@ export function useActiveWorkoutSession(dayPlan: WorkoutDayPlan): ActiveWorkoutS
     if (totalSets === 0) {
       return 0;
     }
-    const checkedCount = completedSets.filter((entry) => entry.checked).length;
+    const checkedCount = completedSets.length;
     return checkedCount / totalSets;
   }, [completedSets, dayPlan.exercises]);
 

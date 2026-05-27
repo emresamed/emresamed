@@ -1,8 +1,9 @@
 import { seedData } from "./data/seedData";
-import { generateWorkoutProgram } from "./engine/workoutGenerator";
+import { loadSeedData } from "./data/seedLoader";
+import { generateWorkoutProgram, safeGenerateWorkoutProgram } from "./engine/workoutGenerator";
 import { OnboardingStore } from "./state/onboardingStore";
 
-export { seedData, generateWorkoutProgram, OnboardingStore };
+export { seedData, loadSeedData, generateWorkoutProgram, safeGenerateWorkoutProgram, OnboardingStore };
 
 if (require.main === module) {
   const onboardingStore = new OnboardingStore();

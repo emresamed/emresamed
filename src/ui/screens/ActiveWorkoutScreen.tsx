@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import { WorkoutDayPlan } from "../../domain/types";
 import { useRestTimer } from "../hooks/useRestTimer";
@@ -18,13 +18,12 @@ export function ActiveWorkoutScreen({
 }: ActiveWorkoutScreenProps) {
   const session = useActiveWorkoutSession(dayPlan);
   const timer = useRestTimer(90);
+  const { remainingSec, progress, isRunning, start, pause, reset } = timer;
 
   const checkedSetKeys = useMemo(() => {
     const keys = new Set<string>();
     for (const completed of session.completedSets) {
-      if (completed.checked) {
-        keys.add(`${completed.exerciseId}-${completed.setIndex}`);
-      }
+      keys.add(`${completed.exerciseId}-${completed.setIndex}`);
     }
     return keys;
   }, [session.completedSets]);
@@ -40,6 +39,10 @@ export function ActiveWorkoutScreen({
   const currentExercise = session.currentExercise;
   const currentExerciseName = exerciseNameById[currentExercise.exerciseId] ?? currentExercise.exerciseId;
   const suggestedRestSec = currentExercise.sets[0]?.restSec ?? 90;
+
+  useEffect(() => {
+    reset(suggestedRestSec);
+  }, [suggestedRestSec, reset]);
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
@@ -58,17 +61,17 @@ export function ActiveWorkoutScreen({
         checkedSetKeys={checkedSetKeys}
         onToggleSet={(setIndex) => {
           session.toggleSet(currentExercise.exerciseId, setIndex);
-          timer.start(suggestedRestSec);
+          start(suggestedRestSec);
         }}
       />
 
       <RestTimerCard
-        remainingSec={timer.remainingSec}
-        progress={timer.progress}
-        isRunning={timer.isRunning}
-        onStart={() => timer.start(suggestedRestSec)}
-        onPause={timer.pause}
-        onReset={() => timer.reset(suggestedRestSec)}
+        remainingSec={remainingSec}
+        progress={progress}
+        isRunning={isRunning}
+        onStart={() => start(suggestedRestSec)}
+        onPause={pause}
+        onReset={() => reset(suggestedRestSec)}
       />
 
       <View style={styles.navigationRow}>

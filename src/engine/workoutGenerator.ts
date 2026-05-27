@@ -20,6 +20,10 @@ export interface GenerateWorkoutInput extends UserMetrics {
   mesocycleWeek?: 1 | 2 | 3 | 4;
 }
 
+export type GenerateWorkoutResult =
+  | { ok: true; program: WorkoutProgram }
+  | { ok: false; error: Error };
+
 const trainingAgeRank: Record<TrainingAge, number> = {
   beginner: 1,
   intermediate: 2,
@@ -39,40 +43,52 @@ export function generateWorkoutProgram(
   input: GenerateWorkoutInput,
   data: SeedData = seedData
 ): WorkoutProgram {
-  validateInput(input);
+  validateInput(input, data);
 
   const splitTemplate = resolveSplitTemplate(input.daysPerWeek, data.splitTemplates);
   const adaptation = splitTemplate.adaptations[input.bodyType];
   const trainingDays = adaptation.weekLayout
     .filter((day) => day.focusLabel !== "rest")
     .slice(0, input.daysPerWeek);
+  const ownedEquipment = new Set(input.equipmentOwned.map((item) => item.toLowerCase().trim()));
+  const equipmentFilteredPool = filterByEquipment(data.exerciseSeed, ownedEquipment);
+
+  if (equipmentFilteredPool.length === 0) {
+    throw new Error("No exercises available for the selected equipment");
+  }
 
   const muscleFrequency = calculateMuscleFrequency(trainingDays);
   const usageCounter = new Map<string, number>();
   const weeklyPlan: WorkoutDayPlan[] = trainingDays.map((day) => {
-    const candidateExercises = data.exerciseSeed.filter(
+    const candidateExercises = equipmentFilteredPool.filter(
       (exercise) =>
-        day.targetMuscles.includes(exercise.primaryMuscle) &&
-        hasEquipmentMatch(exercise.equipmentRequired, input.equipmentOwned)
+        day.targetMuscles.includes(exercise.primaryMuscle)
     );
+    const fallbackCandidates =
+      candidateExercises.length > 0 ? candidateExercises : equipmentFilteredPool;
 
     const selectedExercises = selectExercisesForDay({
       goal: input.goal,
-      bodyType: input.bodyType,
       trainingAge: input.trainingAge,
       targetMuscles: day.targetMuscles,
       adaptation,
-      candidates:
-        candidateExercises.length > 0
-          ? candidateExercises
-          : data.exerciseSeed.filter((exercise) =>
-              hasEquipmentMatch(exercise.equipmentRequired, input.equipmentOwned)
-            ),
+      candidates: fallbackCandidates,
       usageCounter
     });
 
+    if (selectedExercises.length === 0) {
+      throw new Error(`Unable to select exercises for day ${day.dayIndex}`);
+    }
+
+    const exercisesPerMuscle = countExercisesPerPrimaryMuscle(selectedExercises);
     const exercises = selectedExercises.map((exercise) =>
-      mapExerciseToWorkout(exercise, input.goal, input.bodyType, muscleFrequency, selectedExercises)
+      mapExerciseToWorkout(
+        exercise,
+        input.goal,
+        input.bodyType,
+        muscleFrequency,
+        exercisesPerMuscle
+      )
     );
 
     return {
@@ -92,12 +108,32 @@ export function generateWorkoutProgram(
   };
 }
 
-function validateInput(input: GenerateWorkoutInput): void {
+export function safeGenerateWorkoutProgram(
+  input: GenerateWorkoutInput,
+  data: SeedData = seedData
+): GenerateWorkoutResult {
+  try {
+    return { ok: true, program: generateWorkoutProgram(input, data) };
+  } catch (error) {
+    return {
+      ok: false,
+      error: error instanceof Error ? error : new Error("Workout generation failed")
+    };
+  }
+}
+
+function validateInput(input: GenerateWorkoutInput, data: SeedData): void {
   if (!Number.isInteger(input.daysPerWeek) || input.daysPerWeek < 2 || input.daysPerWeek > 6) {
     throw new Error("daysPerWeek must be an integer between 2 and 6");
   }
   if (!input.equipmentOwned || input.equipmentOwned.length === 0) {
     throw new Error("equipmentOwned cannot be empty");
+  }
+  if (!input.goal || !input.bodyType || !input.trainingAge) {
+    throw new Error("goal, bodyType and trainingAge are required");
+  }
+  if (dataHasNoExercises(data)) {
+    throw new Error("Seed data does not include exercises");
   }
 }
 
@@ -138,16 +174,20 @@ function calculateMuscleFrequency(days: SplitAdaptation["weekLayout"]): Record<M
   return frequency;
 }
 
-function hasEquipmentMatch(exerciseEquipment: string[], ownedEquipment: string[]): boolean {
-  const normalizedOwned = new Set(ownedEquipment.map((item) => item.toLowerCase()));
-  return exerciseEquipment.some(
-    (required) => required === "bodyweight" || normalizedOwned.has(required.toLowerCase())
+function filterByEquipment(
+  exercises: ExerciseSeedItem[],
+  ownedEquipment: ReadonlySet<string>
+): ExerciseSeedItem[] {
+  return exercises.filter((exercise) =>
+    exercise.equipmentRequired.some(
+      (required) =>
+        required.toLowerCase() === "bodyweight" || ownedEquipment.has(required.toLowerCase())
+    )
   );
 }
 
 interface SelectExercisesParams {
   goal: Goal;
-  bodyType: BodyType;
   trainingAge: TrainingAge;
   targetMuscles: MuscleGroup[];
   adaptation: SplitAdaptation;
@@ -228,14 +268,12 @@ function mapExerciseToWorkout(
   goal: Goal,
   bodyType: BodyType,
   muscleFrequency: Record<MuscleGroup, number>,
-  dayExercises: ExerciseSeedItem[]
+  exercisesPerMuscle: Record<MuscleGroup, number>
 ): WorkoutExercise {
   const prescription = getEffectivePrescription(goal, bodyType, exercise.movementType);
   const weeklyTarget = getWeeklySetTarget(goal, bodyType, exercise.primaryMuscle);
   const sessionsForMuscle = muscleFrequency[exercise.primaryMuscle];
-  const exercisesForMuscleToday = dayExercises.filter(
-    (dayExercise) => dayExercise.primaryMuscle === exercise.primaryMuscle
-  ).length;
+  const exercisesForMuscleToday = exercisesPerMuscle[exercise.primaryMuscle];
 
   const baseSets = weeklyTarget / sessionsForMuscle / Math.max(1, exercisesForMuscleToday);
   const setCount = clamp(
@@ -255,4 +293,31 @@ function mapExerciseToWorkout(
     exerciseId: exercise.id,
     sets
   };
+}
+
+function countExercisesPerPrimaryMuscle(
+  exercises: ExerciseSeedItem[]
+): Record<MuscleGroup, number> {
+  const counters: Record<MuscleGroup, number> = {
+    chest: 0,
+    back: 0,
+    legs: 0,
+    shoulders: 0,
+    arms: 0,
+    core: 0
+  };
+
+  for (const exercise of exercises) {
+    counters[exercise.primaryMuscle] += 1;
+  }
+
+  for (const key of Object.keys(counters) as MuscleGroup[]) {
+    counters[key] = Math.max(1, counters[key]);
+  }
+
+  return counters;
+}
+
+function dataHasNoExercises(data: SeedData): boolean {
+  return !Array.isArray(data.exerciseSeed) || data.exerciseSeed.length === 0;
 }
