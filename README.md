@@ -24,15 +24,22 @@
 
 ```
 app/                        Expo Router routes (routing only — no logic)
-  _layout.tsx              Root providers
-  (auth)/                  Public routes        — Phase 2
-  (tabs)/                  Protected tabs       — Phase 4
+  _layout.tsx              Root providers + SessionGate
+  index.tsx                Redirect to (auth) or (tabs) based on session
+  (auth)/                  Public routes (login, register, forgot-password)
+  (tabs)/                  Protected tabs (Phase 4 will add real tabs)
 
 src/
   components/
-    ui/                    Atomic primitives (Button, Card, Text…)
-    layout/                Layout primitives (Screen, Container…)
-  features/                Feature-sliced modules (auth, workouts, exercises…)
+    ui/                    Atomic primitives (Button, Text, TextField...)
+    layout/                Layout primitives (Screen...)
+  features/                Feature-sliced modules
+    auth/                  ← Phase 2
+      components/
+      hooks/
+      services/
+      validators.ts
+      index.ts             Public surface (import only from here)
   hooks/                   Cross-cutting hooks
   lib/                     Third-party clients (supabase, queryClient)
   services/                Cross-feature data services
@@ -40,7 +47,7 @@ src/
   theme/                   Design tokens (colors, spacing, radii, typography)
   constants/               env, routes, app config
   types/                   Shared TS types
-  utils/                   Pure helpers (cn, formatters…)
+  utils/                   Pure helpers (cn, formatters...)
 ```
 
 ### Architectural rules
@@ -50,6 +57,7 @@ src/
 3. **Zustand for client state · React Query for server state.** Never mix.
 4. **Design tokens in `src/theme` are the single source of truth.** Tailwind config consumes the same files.
 5. **No deep relative imports.** Use the `@/*` path alias.
+6. **Outside code imports from a feature's `index.ts` only** — internals stay refactorable.
 
 ---
 
@@ -73,10 +81,10 @@ npm run start
 
 | Phase | Scope                                    | Status     |
 | ----- | ---------------------------------------- | ---------- |
-| 1     | Project foundation & architecture        | ✅ done    |
-| 2     | Authentication (Supabase)                | ⬜ next    |
-| 3     | Database schema & seed                   | ⬜         |
-| 4     | Main UI screens                          | ⬜         |
-| 5     | Workout tracker                          | ⬜         |
-| 6     | Progress tracking                        | ⬜         |
-| 7     | Polish & optimization                    | ⬜         |
+| 1     | Project foundation & architecture        | done       |
+| 2     | Authentication (Supabase)                | done       |
+| 3     | Database schema & seed                   | next       |
+| 4     | Main UI screens                          | pending    |
+| 5     | Workout tracker                          | pending    |
+| 6     | Progress tracking                        | pending    |
+| 7     | Polish & optimization                    | pending    |

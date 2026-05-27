@@ -1,11 +1,12 @@
 import { Redirect } from 'expo-router';
 
+import { useAuth } from '@/features/auth';
+
 /**
- * Entry route.
- *
- * Phase 1: temporarily redirects to the auth group placeholder.
- * Phase 2 will replace this with a real auth-state check.
+ * Entry route. SessionGate guarantees we never render here while loading,
+ * so we can decide synchronously.
  */
 export default function Index() {
-  return <Redirect href="/(auth)" />;
+  const { isAuthenticated } = useAuth();
+  return <Redirect href={isAuthenticated ? '/(tabs)' : '/(auth)/login'} />;
 }

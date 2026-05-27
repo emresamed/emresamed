@@ -1,9 +1,21 @@
-import { Stack } from 'expo-router';
+import { Redirect, Stack } from 'expo-router';
+
+import { useAuth } from '@/features/auth';
 
 /**
  * Public (unauthenticated) route group.
- * Phase 2 will add login / register / forgot-password screens here.
+ * Authenticated users are bounced to the tabs — they shouldn't see auth screens.
  */
 export default function AuthLayout() {
-  return <Stack screenOptions={{ headerShown: false }} />;
+  const { isAuthenticated } = useAuth();
+  if (isAuthenticated) return <Redirect href="/(tabs)" />;
+
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        animation: 'slide_from_right',
+      }}
+    />
+  );
 }

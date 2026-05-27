@@ -3,19 +3,18 @@ import '../global.css';
 import { QueryClientProvider } from '@tanstack/react-query';
 import { Stack } from 'expo-router';
 import { StatusBar } from 'expo-status-bar';
+import type { ReactNode } from 'react';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
+import { useAuth, useAuthBootstrap } from '@/features/auth';
+import { SplashGate } from '@/features/auth/components/SplashGate';
 import { queryClient } from '@/lib/queryClient';
 import { colors } from '@/theme';
 
 /**
- * Root layout — wraps every route with the providers the app needs:
- *  - QueryClientProvider: server-state cache (React Query)
- *  - SafeAreaProvider: notch/home-indicator insets
- *  - GestureHandlerRootView: required for Reanimated + gestures
- *
- * NEVER add business logic here. Providers only.
+ * Root layout — wraps every route with providers and gates rendering
+ * on the initial auth check. NEVER add business logic here.
  */
 export default function RootLayout() {
   return (
@@ -23,15 +22,30 @@ export default function RootLayout() {
       <SafeAreaProvider>
         <QueryClientProvider client={queryClient}>
           <StatusBar style="light" />
-          <Stack
-            screenOptions={{
-              headerShown: false,
-              contentStyle: { backgroundColor: colors.bg.DEFAULT },
-              animation: 'fade',
-            }}
-          />
+          <SessionGate>
+            <RootStack />
+          </SessionGate>
         </QueryClientProvider>
       </SafeAreaProvider>
     </GestureHandlerRootView>
+  );
+}
+
+function SessionGate({ children }: { children: ReactNode }) {
+  useAuthBootstrap();
+  const { isLoading } = useAuth();
+  if (isLoading) return <SplashGate />;
+  return <>{children}</>;
+}
+
+function RootStack() {
+  return (
+    <Stack
+      screenOptions={{
+        headerShown: false,
+        contentStyle: { backgroundColor: colors.bg.DEFAULT },
+        animation: 'fade',
+      }}
+    />
   );
 }

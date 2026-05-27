@@ -6,8 +6,8 @@
  * - Each slice owns ONLY client state — never duplicate server data (use React Query).
  * - Re-export hooks from here so consumers do `import { useAuthStore } from '@/store'`.
  *
- * Slices are added in their respective phases:
- *   Phase 2 → useAuthStore
+ * Slices added per phase:
+ *   Phase 2 → useAuthStore                            ✓
  *   Phase 5 → useWorkoutSessionStore, useTimerStore
  */
-export {};
+export { useAuthStore, type AuthStatus } from './useAuthStore';
