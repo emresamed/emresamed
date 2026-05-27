@@ -1,7 +1,7 @@
 import "../global.css";
 
 import { Stack } from "expo-router";
-import { StatusBar } from "expo-status-bar";
+import { StatusBar } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 import { colors } from "@/constants/colors";
@@ -17,7 +17,7 @@ export default function RootLayout() {
             headerShown: false
           }}
         />
-        <StatusBar style="light" />
+        <StatusBar backgroundColor={colors.background.primary} barStyle="light-content" />
       </AppProviders>
     </GestureHandlerRootView>
   );
