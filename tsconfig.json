@@ -1,6 +1,7 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "jsx": "react-native",
@@ -13,7 +14,7 @@
       "@services/*": ["src/services/*"],
       "@shared/*": ["src/shared/*"],
       "@stores/*": ["src/stores/*"],
-      "@types/*": ["src/types/*"]
+      "@app-types/*": ["src/types/*"]
     },
     "strict": true
   },
