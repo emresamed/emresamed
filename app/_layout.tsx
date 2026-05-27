@@ -8,6 +8,7 @@ import '../global.css';
 
 import { AppProviders } from '@/components/providers';
 import { colors } from '@/constants/theme';
+import { useAuthStore } from '@/stores/authStore';
 
 export { ErrorBoundary } from 'expo-router';
 
@@ -21,16 +22,17 @@ export default function RootLayout() {
   const [loaded, error] = useFonts({
     SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
   });
+  const isInitialized = useAuthStore((state) => state.isInitialized);
 
   useEffect(() => {
     if (error) throw error;
   }, [error]);
 
   useEffect(() => {
-    if (loaded) {
+    if (loaded && isInitialized) {
       SplashScreen.hideAsync();
     }
-  }, [loaded]);
+  }, [loaded, isInitialized]);
 
   if (!loaded) {
     return null;

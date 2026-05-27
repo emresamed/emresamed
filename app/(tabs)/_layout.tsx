@@ -1,9 +1,21 @@
-import { Tabs } from 'expo-router';
+import { Redirect, Tabs } from 'expo-router';
 import { Dumbbell, Home, Search, User } from 'lucide-react-native';
 
+import { ROUTES } from '@/constants/routes';
 import { colors } from '@/constants/theme';
+import { useAuthGuard } from '@/hooks/useAuthGuard';
 
 export default function TabLayout() {
+  const { isInitialized, isAuthenticated } = useAuthGuard();
+
+  if (!isInitialized) {
+    return null;
+  }
+
+  if (!isAuthenticated) {
+    return <Redirect href={ROUTES.auth.login} />;
+  }
+
   return (
     <Tabs
       screenOptions={{

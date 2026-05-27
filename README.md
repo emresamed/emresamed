@@ -37,15 +37,16 @@ EXPO_PUBLIC_SUPABASE_ANON_KEY=your-key
 
 ```
 app/                 # Expo Router screens and navigation
-  (tabs)/            # Main tab navigation
-  (auth)/            # Authentication screens (Phase 2)
+  (tabs)/            # Main tab navigation (protected)
+  (auth)/            # Authentication screens
 components/
   ui/                # Reusable UI primitives
+  auth/              # Auth-specific UI components
   providers/         # App-level providers
 constants/           # Config, routes, theme tokens
-hooks/               # Custom React hooks
-lib/                 # Utilities and env helpers
-services/            # API clients (Supabase, React Query)
+hooks/               # Custom React hooks (useAuth, useAuthGuard)
+lib/                 # Utilities, validation, env helpers
+services/            # API clients (Supabase, auth service)
 stores/              # Zustand stores
 types/               # Shared TypeScript types
 ```
@@ -55,12 +56,20 @@ types/               # Shared TypeScript types
 | Phase | Status |
 |-------|--------|
 | 1 — Project Foundation | ✅ Complete |
-| 2 — Authentication | Pending |
+| 2 — Authentication | ✅ Complete |
 | 3 — Database Design | Pending |
 | 4 — Main UI Screens | Pending |
 | 5 — Workout Tracker | Pending |
 | 6 — Progress Tracking | Pending |
 | 7 — Polish & Optimization | Pending |
+
+## Authentication
+
+- Email/password sign in and registration via Supabase
+- Forgot password flow with email reset link
+- Session persistence with SecureStore (native) / localStorage (web)
+- Protected tab routes redirect unauthenticated users to login
+- Auth routes redirect authenticated users to the main app
 
 ## License
 
