@@ -52,7 +52,9 @@ class ActiveWorkoutScreen extends StatelessWidget {
           if (workout.isResting)
             RestTimer(
               secondsRemaining: workout.restSecondsRemaining,
-              totalSeconds: rx.restSeconds,
+              totalSeconds: workout.restTotalSeconds > 0
+                  ? workout.restTotalSeconds
+                  : rx.restSeconds,
               onSkip: workout.skipRest,
             ),
           Expanded(

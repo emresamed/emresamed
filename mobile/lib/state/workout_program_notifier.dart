@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 
+import '../core/errors.dart';
 import '../data/models/generated_workout.dart';
 import '../data/models/user_profile.dart';
 import '../domain/services/workout_generator.dart';
@@ -23,8 +24,12 @@ class WorkoutProgramNotifier extends ChangeNotifier {
     notifyListeners();
     try {
       _program = await _generator.generate(profile);
+      _error = null;
+    } on WorkoutGenerationException catch (e) {
+      _error = e.message;
+      _program = null;
     } catch (e, st) {
-      _error = e.toString();
+      _error = 'Could not build your program. Please try again.';
       debugPrint('Workout generation failed: $e\n$st');
       _program = null;
     } finally {

@@ -8,11 +8,13 @@ import 'domain/services/prescription_engine.dart';
 import 'domain/services/split_selector.dart';
 import 'domain/services/workout_generator.dart';
 import 'state/active_workout_notifier.dart';
+import 'state/bootstrap_notifier.dart';
 import 'state/onboarding_notifier.dart';
 import 'state/workout_program_notifier.dart';
 import 'ui/screens/active_workout_screen.dart';
 import 'ui/screens/home_screen.dart';
 import 'ui/screens/onboarding_screen.dart';
+import 'ui/widgets/app_error_boundary.dart';
 
 class FitForgeApp extends StatelessWidget {
   const FitForgeApp({super.key});
@@ -29,6 +31,9 @@ class FitForgeApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(
+          create: (_) => BootstrapNotifier(seedSource)..init(),
+        ),
         ChangeNotifierProvider(create: (_) => OnboardingNotifier()..load()),
         ChangeNotifierProvider(
           create: (_) => WorkoutProgramNotifier(generator),
@@ -55,12 +60,25 @@ class _RootGate extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final bootstrap = context.watch<BootstrapNotifier>();
     final onboarding = context.watch<OnboardingNotifier>();
-    if (onboarding.isLoading) {
+
+    if (bootstrap.loading || onboarding.isLoading) {
       return const Scaffold(
-        body: Center(child: CircularProgressIndicator(color: AppColors.accent)),
+        body: Center(
+          child: CircularProgressIndicator(color: AppColors.accent),
+        ),
       );
     }
+
+    if (bootstrap.error != null) {
+      return ErrorFallbackScreen(
+        title: 'Data load failed',
+        message: bootstrap.error!,
+        onRetry: () => context.read<BootstrapNotifier>().retry(),
+      );
+    }
+
     return onboarding.isComplete
         ? const HomeScreen()
         : const OnboardingScreen();

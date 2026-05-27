@@ -1,6 +1,8 @@
 import 'package:uuid/uuid.dart';
 
 import '../../core/enums.dart';
+import '../../core/errors.dart';
+import '../../core/validation/profile_validator.dart';
 import '../../data/models/algorithm_config.dart';
 import '../../data/models/exercise.dart';
 import '../../data/models/generated_workout.dart';
@@ -16,20 +18,25 @@ class WorkoutGenerator {
   WorkoutGenerator(
     this._repository,
     this._splitSelector,
-    this._prescriptionEngine,
-  );
+    this._prescriptionEngine, {
+    ProfileValidator? validator,
+  }) : _validator = validator ?? ProfileValidator();
 
   final ExerciseRepository _repository;
   final SplitSelector _splitSelector;
   final PrescriptionEngine _prescriptionEngine;
+  final ProfileValidator _validator;
   final _uuid = const Uuid();
 
   Future<GeneratedWorkout> generate(
     UserProfile profile, {
     Set<String> recentlyUsedExerciseIds = const {},
   }) async {
+    _validator.validate(profile);
+
     final config = await _repository.getAlgorithmConfig();
     final templates = await _repository.getSplitTemplates();
+    final allExercises = await _repository.getAllExercises();
     final split = _splitSelector.resolve(profile);
 
     final sessionTemplates = _pickSessionTemplates(
@@ -40,7 +47,19 @@ class WorkoutGenerator {
 
     final sessions = <WorkoutSession>[];
     for (final template in sessionTemplates) {
-      final picks = await _fillSession(template, profile, config, recentlyUsedExerciseIds);
+      final picks = _fillSession(
+        template,
+        profile,
+        config,
+        allExercises,
+        recentlyUsedExerciseIds,
+      );
+      if (picks.isEmpty) {
+        throw WorkoutGenerationException(
+          'No exercises found for ${template.sessionName}. '
+          'Add more equipment or lower difficulty.',
+        );
+      }
       sessions.add(
         WorkoutSession(
           dayIndex: template.dayIndex,
@@ -49,6 +68,10 @@ class WorkoutGenerator {
           conditioningMinutes: template.conditioningMinutes,
         ),
       );
+    }
+
+    if (sessions.isEmpty) {
+      throw WorkoutGenerationException('No sessions could be built.');
     }
 
     return GeneratedWorkout(
@@ -66,13 +89,14 @@ class WorkoutGenerator {
   ) {
     final matching = all
         .where(
-          (t) =>
-              t.bodyType == profile.bodyType && t.splitType == split,
+          (t) => t.bodyType == profile.bodyType && t.splitType == split,
         )
         .toList();
 
     if (matching.isEmpty) {
-      throw StateError('No split templates for ${profile.bodyType} / $split');
+      throw WorkoutGenerationException(
+        'No split templates for ${profile.bodyType.name} / ${split.name}',
+      );
     }
 
     final byDays = matching
@@ -88,26 +112,30 @@ class WorkoutGenerator {
       ..sort((a, b) => a.dayIndex.compareTo(b.dayIndex));
   }
 
-  Future<List<SessionExercise>> _fillSession(
+  List<SessionExercise> _fillSession(
     SplitSessionTemplate template,
     UserProfile profile,
     AlgorithmConfig config,
+    List<Exercise> allExercises,
     Set<String> recentIds,
-  ) async {
+  ) {
     final compoundsNeeded = template.slotRules.compoundCount;
     final isolationsNeeded = template.slotRules.isolationCount;
+    final maxExercises = template.slotRules.maxExercises;
     final selected = <SessionExercise>[];
     final usedIds = <String>{};
 
     for (final target in template.muscleTargets) {
-      final compounds = await _repository.filterExercises(
+      var compounds = _repository.filterFromCache(
+        allExercises,
         availableEquipment: profile.availableEquipment,
         primaryMuscle: target.muscleGroup,
         targetZones: target.targetZones,
         mechanics: MovementMechanics.compound,
         userLevel: profile.experienceLevel,
       );
-      final isolations = await _repository.filterExercises(
+      var isolations = _repository.filterFromCache(
+        allExercises,
         availableEquipment: profile.availableEquipment,
         primaryMuscle: target.muscleGroup,
         targetZones: target.targetZones,
@@ -115,16 +143,39 @@ class WorkoutGenerator {
         userLevel: profile.experienceLevel,
       );
 
+      if (compounds.isEmpty && isolations.isEmpty) {
+        compounds = _repository.filterFromCache(
+          allExercises,
+          availableEquipment: profile.availableEquipment,
+          primaryMuscle: target.muscleGroup,
+          mechanics: MovementMechanics.compound,
+          userLevel: profile.experienceLevel,
+          strictTargetZones: false,
+        );
+        isolations = _repository.filterFromCache(
+          allExercises,
+          availableEquipment: profile.availableEquipment,
+          primaryMuscle: target.muscleGroup,
+          mechanics: MovementMechanics.isolation,
+          userLevel: profile.experienceLevel,
+          strictTargetZones: false,
+        );
+      }
+
       final compoundSlots = _slotsForMuscle(
         compoundsNeeded,
         template.muscleTargets.length,
-        selected.where((s) => s.exercise.mechanics == MovementMechanics.compound).length,
+        selected
+            .where((s) => s.exercise.mechanics == MovementMechanics.compound)
+            .length,
         compoundsNeeded,
       );
       final isolationSlots = _slotsForMuscle(
         isolationsNeeded,
         template.muscleTargets.length,
-        selected.where((s) => s.exercise.mechanics == MovementMechanics.isolation).length,
+        selected
+            .where((s) => s.exercise.mechanics == MovementMechanics.isolation)
+            .length,
         isolationsNeeded,
       );
 
@@ -137,6 +188,7 @@ class WorkoutGenerator {
         recentIds,
         usedIds,
         selected,
+        maxExercises,
       );
       _pickTop(
         isolations,
@@ -147,12 +199,13 @@ class WorkoutGenerator {
         recentIds,
         usedIds,
         selected,
+        maxExercises,
       );
 
-      if (selected.length >= template.slotRules.maxExercises) break;
+      if (selected.length >= maxExercises) break;
     }
 
-    return selected.take(template.slotRules.maxExercises).toList();
+    return selected.take(maxExercises).toList();
   }
 
   int _slotsForMuscle(
@@ -174,6 +227,7 @@ class WorkoutGenerator {
     Set<String> recentIds,
     Set<String> usedIds,
     List<SessionExercise> out,
+    int maxExercises,
   ) {
     if (count <= 0 || pool.isEmpty) return;
 
@@ -194,7 +248,7 @@ class WorkoutGenerator {
       });
 
     for (final entry in ranked.take(count)) {
-      if (out.length >= 8) break;
+      if (out.length >= maxExercises) break;
       final prescription = _prescriptionEngine.build(
         exerciseId: entry.key.id,
         profile: profile,

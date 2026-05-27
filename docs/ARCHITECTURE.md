@@ -40,4 +40,4 @@ Canonical schemas: `Exercise`, `UserProfile`, `WorkoutSessionTemplate`, `Prescri
 | 2 | Data Engineer | Done (seed files) |
 | 3 | Core Developer | Done (`mobile/lib/domain`, `mobile/lib/state`) |
 | 4 | UI Engineer | Done (`mobile/lib/ui`) |
-| 5 | QA | Partial (generator unit tests) |
+| 5 | QA | Done (audit, error handling, expanded tests) |
