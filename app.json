@@ -1,0 +1,13 @@
+{
+  "expo": {
+    "name": "mobile-fitness-app",
+    "slug": "mobile-fitness-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "platforms": ["ios", "android", "web"],
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
