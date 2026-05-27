@@ -1,0 +1,77 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Exercise",
+  "type": "object",
+  "required": [
+    "id", "name", "primaryMuscle", "secondaryMuscles",
+    "mechanics", "equipment", "difficulty",
+    "targetZone", "movementPattern"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique URL-safe slug, e.g. 'barbell-bench-press'"
+    },
+    "name": { "type": "string" },
+    "primaryMuscle": {
+      "type": "string",
+      "enum": ["CHEST", "BACK", "LEGS", "SHOULDERS", "ARMS", "CORE"]
+    },
+    "secondaryMuscles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["CHEST", "BACK", "LEGS", "SHOULDERS", "ARMS", "CORE"]
+      }
+    },
+    "mechanics": {
+      "type": "string",
+      "enum": ["COMPOUND", "ISOLATION"]
+    },
+    "equipment": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BARBELL", "DUMBBELL", "CABLE", "MACHINE",
+          "BODYWEIGHT", "KETTLEBELL", "RESISTANCE_BAND", "PULL_UP_BAR"
+        ]
+      }
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED"]
+    },
+    "targetZone": {
+      "type": "string",
+      "enum": [
+        "UPPER_CHEST", "MID_CHEST", "LOWER_CHEST",
+        "UPPER_BACK", "MID_BACK", "LOWER_BACK",
+        "QUADS", "HAMSTRINGS", "GLUTES", "CALVES",
+        "ANTERIOR_DELT", "LATERAL_DELT", "POSTERIOR_DELT",
+        "BICEPS", "TRICEPS", "FOREARMS",
+        "UPPER_ABS", "LOWER_ABS", "OBLIQUES", "TVA"
+      ]
+    },
+    "movementPattern": {
+      "type": "string",
+      "enum": [
+        "HORIZONTAL_PUSH", "HORIZONTAL_PULL",
+        "VERTICAL_PUSH", "VERTICAL_PULL",
+        "HIP_HINGE", "SQUAT", "LUNGE",
+        "ROTATION", "CARRY",
+        "ISOLATION_CURL", "ISOLATION_EXTENSION",
+        "ISOLATION_FLY", "CORE_STABILIZATION"
+      ]
+    },
+    "unilateral": {
+      "type": "boolean",
+      "default": false
+    },
+    "videoRef": {
+      "type": "string",
+      "description": "Asset key for exercise demonstration video"
+    }
+  },
+  "additionalProperties": false
+}

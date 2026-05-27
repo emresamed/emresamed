@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "WorkoutProgram",
+  "type": "object",
+  "required": ["id", "userId", "splitType", "weeks", "currentWeek", "days", "progressionPlan"],
+  "properties": {
+    "id": { "type": "string" },
+    "userId": { "type": "string" },
+    "splitType": {
+      "type": "string",
+      "enum": ["PUSH_PULL_LEGS", "UPPER_LOWER", "FULL_BODY", "BRO_SPLIT"]
+    },
+    "weeks": { "type": "integer", "minimum": 4, "maximum": 16 },
+    "currentWeek": { "type": "integer", "minimum": 1 },
+    "days": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/WorkoutDay" },
+      "minItems": 1
+    },
+    "progressionPlan": { "$ref": "#/definitions/ProgressionPlan" }
+  },
+  "definitions": {
+    "WorkoutDay": {
+      "type": "object",
+      "required": ["dayIndex", "label", "muscleGroupFocus", "exerciseSlots"],
+      "properties": {
+        "dayIndex": { "type": "integer", "minimum": 1, "maximum": 7 },
+        "label": { "type": "string" },
+        "isRestDay": { "type": "boolean", "default": false },
+        "muscleGroupFocus": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["CHEST", "BACK", "LEGS", "SHOULDERS", "ARMS", "CORE"]
+          }
+        },
+        "exerciseSlots": {
+          "type": "array",
+          "items": { "$ref": "#/definitions/ExerciseSlot" }
+        }
+      }
+    },
+    "ExerciseSlot": {
+      "type": "object",
+      "required": [
+        "slotOrder", "exerciseId",
+        "sets", "repRangeLow", "repRangeHigh", "restSeconds"
+      ],
+      "properties": {
+        "slotOrder": { "type": "integer", "minimum": 1 },
+        "exerciseId": { "type": "string" },
+        "sets": { "type": "integer", "minimum": 1 },
+        "repRangeLow": { "type": "integer", "minimum": 1 },
+        "repRangeHigh": { "type": "integer", "minimum": 1 },
+        "restSeconds": { "type": "integer", "minimum": 20 },
+        "rpeTarget": { "type": "number", "minimum": 1, "maximum": 10 },
+        "notes": { "type": "string" },
+        "isSuperset": { "type": "boolean", "default": false },
+        "supersetPartnerId": { "type": "string" }
+      }
+    },
+    "ProgressionPlan": {
+      "type": "object",
+      "required": ["model", "deloadEveryNWeeks"],
+      "properties": {
+        "model": {
+          "type": "string",
+          "enum": ["LINEAR", "DOUBLE_PROGRESSIVE", "VOLUME_PROGRESSIVE"]
+        },
+        "deloadEveryNWeeks": { "type": "integer", "minimum": 2, "maximum": 8 },
+        "loadIncrementUpperBodyKg": { "type": "number", "default": 2.5 },
+        "loadIncrementLowerBodyKg": { "type": "number", "default": 5.0 }
+      }
+    }
+  }
+}

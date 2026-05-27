@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UserProfile",
+  "type": "object",
+  "required": [
+    "id", "bodyType", "primaryGoal",
+    "availableEquipment", "trainingDaysPerWeek",
+    "experienceLevel", "createdAt"
+  ],
+  "properties": {
+    "id": { "type": "string" },
+    "bodyType": {
+      "type": "string",
+      "enum": ["ECTOMORPH", "MESOMORPH", "ENDOMORPH"]
+    },
+    "primaryGoal": {
+      "type": "string",
+      "enum": ["STRENGTH", "HYPERTROPHY", "FAT_LOSS"]
+    },
+    "availableEquipment": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BARBELL", "DUMBBELL", "CABLE", "MACHINE",
+          "BODYWEIGHT", "KETTLEBELL", "RESISTANCE_BAND", "PULL_UP_BAR"
+        ]
+      },
+      "minItems": 1
+    },
+    "trainingDaysPerWeek": {
+      "type": "integer",
+      "minimum": 2,
+      "maximum": 6
+    },
+    "experienceLevel": {
+      "type": "string",
+      "enum": ["BEGINNER", "INTERMEDIATE", "ADVANCED"]
+    },
+    "bodyMetrics": {
+      "type": "object",
+      "properties": {
+        "weightKg": { "type": "number", "minimum": 30 },
+        "heightCm": { "type": "number", "minimum": 100 },
+        "ageYears": { "type": "integer", "minimum": 14, "maximum": 100 },
+        "biologicalSex": {
+          "type": "string",
+          "enum": ["MALE", "FEMALE", "OTHER"]
+        }
+      }
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" }
+  },
+  "additionalProperties": false
+}

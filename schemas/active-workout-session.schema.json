@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ActiveWorkoutSession",
+  "type": "object",
+  "required": ["id", "userId", "workoutDayId", "startedAt", "status", "setLogs"],
+  "properties": {
+    "id": { "type": "string" },
+    "userId": { "type": "string" },
+    "workoutDayId": { "type": "string" },
+    "startedAt": { "type": "string", "format": "date-time" },
+    "completedAt": { "type": "string", "format": "date-time" },
+    "status": {
+      "type": "string",
+      "enum": ["IN_PROGRESS", "COMPLETED", "ABANDONED"]
+    },
+    "setLogs": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/SetLog" }
+    },
+    "restTimerState": { "$ref": "#/definitions/RestTimerState" }
+  },
+  "definitions": {
+    "SetLog": {
+      "type": "object",
+      "required": ["slotOrder", "exerciseId", "setNumber", "isCompleted"],
+      "properties": {
+        "slotOrder": { "type": "integer" },
+        "exerciseId": { "type": "string" },
+        "setNumber": { "type": "integer", "minimum": 1 },
+        "targetReps": { "type": "integer" },
+        "actualReps": { "type": "integer" },
+        "loadKg": { "type": "number", "minimum": 0 },
+        "rpe": { "type": "number", "minimum": 1, "maximum": 10 },
+        "isCompleted": { "type": "boolean" },
+        "completedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "RestTimerState": {
+      "type": "object",
+      "required": ["durationSeconds", "remainingSeconds", "isRunning"],
+      "properties": {
+        "durationSeconds": { "type": "integer", "minimum": 0 },
+        "remainingSeconds": { "type": "integer", "minimum": 0 },
+        "isRunning": { "type": "boolean" },
+        "triggeredBySlotOrder": { "type": "integer" },
+        "triggeredBySetNumber": { "type": "integer" }
+      }
+    }
+  }
+}

@@ -1,0 +1,144 @@
+[
+  {
+    "id": "CHEST",
+    "name": "Chest",
+    "weeklyVolumeRecommendation": { "minSets": 10, "maxSets": 20 },
+    "targetZones": [
+      {
+        "id": "UPPER_CHEST",
+        "name": "Upper Chest",
+        "anatomicalNote": "Clavicular head of pectoralis major; activated by incline angles (30–45°)"
+      },
+      {
+        "id": "MID_CHEST",
+        "name": "Mid / Sternal Chest",
+        "anatomicalNote": "Sternal head of pectoralis major; flat horizontal pressing"
+      },
+      {
+        "id": "LOWER_CHEST",
+        "name": "Lower Chest",
+        "anatomicalNote": "Lower sternal fibres; activated by decline angles or dips"
+      }
+    ]
+  },
+  {
+    "id": "BACK",
+    "name": "Back",
+    "weeklyVolumeRecommendation": { "minSets": 10, "maxSets": 22 },
+    "targetZones": [
+      {
+        "id": "UPPER_BACK",
+        "name": "Upper Back",
+        "anatomicalNote": "Trapezius (mid/upper), rhomboids; horizontal row-dominant"
+      },
+      {
+        "id": "MID_BACK",
+        "name": "Lats / Mid Back",
+        "anatomicalNote": "Latissimus dorsi; vertical pull and wide-grip row dominant"
+      },
+      {
+        "id": "LOWER_BACK",
+        "name": "Lower Back / Erectors",
+        "anatomicalNote": "Erector spinae; hip-hinge dominant movements"
+      }
+    ]
+  },
+  {
+    "id": "LEGS",
+    "name": "Legs",
+    "weeklyVolumeRecommendation": { "minSets": 12, "maxSets": 24 },
+    "targetZones": [
+      {
+        "id": "QUADS",
+        "name": "Quadriceps",
+        "anatomicalNote": "Rectus femoris + vasti; knee extension / squat dominant"
+      },
+      {
+        "id": "HAMSTRINGS",
+        "name": "Hamstrings",
+        "anatomicalNote": "Biceps femoris, semimembranosus, semitendinosus; hip-hinge dominant"
+      },
+      {
+        "id": "GLUTES",
+        "name": "Glutes",
+        "anatomicalNote": "Gluteus maximus/medius; hip extension and abduction"
+      },
+      {
+        "id": "CALVES",
+        "name": "Calves",
+        "anatomicalNote": "Gastrocnemius + soleus; plantar flexion"
+      }
+    ]
+  },
+  {
+    "id": "SHOULDERS",
+    "name": "Shoulders",
+    "weeklyVolumeRecommendation": { "minSets": 8, "maxSets": 16 },
+    "targetZones": [
+      {
+        "id": "ANTERIOR_DELT",
+        "name": "Anterior Deltoid",
+        "anatomicalNote": "Front delt; shoulder flexion and internal rotation"
+      },
+      {
+        "id": "LATERAL_DELT",
+        "name": "Lateral Deltoid",
+        "anatomicalNote": "Side delt; shoulder abduction — key for width"
+      },
+      {
+        "id": "POSTERIOR_DELT",
+        "name": "Posterior Deltoid",
+        "anatomicalNote": "Rear delt; shoulder extension and external rotation"
+      }
+    ]
+  },
+  {
+    "id": "ARMS",
+    "name": "Arms",
+    "weeklyVolumeRecommendation": { "minSets": 6, "maxSets": 16 },
+    "targetZones": [
+      {
+        "id": "BICEPS",
+        "name": "Biceps",
+        "anatomicalNote": "Biceps brachii (long + short head) + brachialis; elbow flexion and supination"
+      },
+      {
+        "id": "TRICEPS",
+        "name": "Triceps",
+        "anatomicalNote": "Triceps brachii (long, lateral, medial head); elbow extension"
+      },
+      {
+        "id": "FOREARMS",
+        "name": "Forearms",
+        "anatomicalNote": "Flexors and extensors of the wrist; grip-dominant movements"
+      }
+    ]
+  },
+  {
+    "id": "CORE",
+    "name": "Core",
+    "weeklyVolumeRecommendation": { "minSets": 6, "maxSets": 14 },
+    "targetZones": [
+      {
+        "id": "UPPER_ABS",
+        "name": "Upper Abs",
+        "anatomicalNote": "Upper rectus abdominis; trunk flexion movements"
+      },
+      {
+        "id": "LOWER_ABS",
+        "name": "Lower Abs",
+        "anatomicalNote": "Lower rectus abdominis; hip flexion and posterior pelvic tilt"
+      },
+      {
+        "id": "OBLIQUES",
+        "name": "Obliques",
+        "anatomicalNote": "Internal + external obliques; rotation and lateral flexion"
+      },
+      {
+        "id": "TVA",
+        "name": "Transverse Abdominis",
+        "anatomicalNote": "Deep stabiliser; intra-abdominal pressure and spinal stabilization"
+      }
+    ]
+  }
+]
