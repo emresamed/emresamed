@@ -1,0 +1,22 @@
+{
+  "seed_version": "1.0.0",
+  "generated_at": "2026-05-27T23:50:04.957924+00:00",
+  "exercise_count": 60,
+  "muscle_group_count": 6,
+  "template_count": 36,
+  "goals": [
+    "STRENGTH",
+    "HYPERTROPHY",
+    "ENDURANCE"
+  ],
+  "body_types": [
+    "ECTOMORPH",
+    "MESOMORPH",
+    "ENDOMORPH"
+  ],
+  "splits": [
+    "FULL_BODY",
+    "UPPER_LOWER",
+    "PUSH_PULL_LEGS"
+  ]
+}

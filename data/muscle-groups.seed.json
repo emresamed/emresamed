@@ -1,0 +1,387 @@
+[
+  {
+    "id": "CHEST",
+    "name": "Chest",
+    "antagonist": "BACK",
+    "target_zones": [
+      {
+        "id": "UPPER_CHEST",
+        "display_name": "Upper Chest",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "BB_INCLINE_BENCH_PRESS",
+          "DB_INCLINE_BENCH_PRESS",
+          "DB_INCLINE_FLY"
+        ]
+      },
+      {
+        "id": "MID_CHEST",
+        "display_name": "Mid Chest",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "BB_BENCH_PRESS",
+          "DB_FLAT_BENCH_PRESS",
+          "PEC_DECK_FLY",
+          "CABLE_CHEST_FLY"
+        ]
+      },
+      {
+        "id": "LOWER_CHEST",
+        "display_name": "Lower Chest",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "BB_DECLINE_BENCH_PRESS",
+          "DIP_CHEST"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 6,
+      "MEV": 8,
+      "MAV": 12,
+      "MRV": 20
+    }
+  },
+  {
+    "id": "BACK",
+    "name": "Back",
+    "antagonist": "CHEST",
+    "target_zones": [
+      {
+        "id": "UPPER_TRAPS",
+        "display_name": "Upper Traps",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "BB_SHRUG",
+          "CABLE_FACE_PULL"
+        ]
+      },
+      {
+        "id": "MID_BACK",
+        "display_name": "Mid Back",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "T_BAR_ROW",
+          "SEATED_CABLE_ROW",
+          "DB_ONE_ARM_ROW"
+        ]
+      },
+      {
+        "id": "LATS_WIDTH",
+        "display_name": "Lats (Width)",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "PULL_UP",
+          "CHIN_UP",
+          "LAT_PULLDOWN_WIDE"
+        ]
+      },
+      {
+        "id": "LATS_THICKNESS",
+        "display_name": "Lats (Thickness)",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "BB_BENT_OVER_ROW",
+          "DB_ONE_ARM_ROW",
+          "T_BAR_ROW"
+        ]
+      },
+      {
+        "id": "LOWER_BACK",
+        "display_name": "Lower Back / Erectors",
+        "preferred_force": [
+          "HINGE"
+        ],
+        "stimulus_priority": [
+          "BB_DEADLIFT",
+          "RACK_PULL",
+          "BB_RDL"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 6,
+      "MEV": 10,
+      "MAV": 16,
+      "MRV": 25
+    }
+  },
+  {
+    "id": "SHOULDERS",
+    "name": "Shoulders",
+    "antagonist": null,
+    "target_zones": [
+      {
+        "id": "FRONT_DELT",
+        "display_name": "Front Delt",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "BB_OVERHEAD_PRESS",
+          "DB_SHOULDER_PRESS",
+          "ARNOLD_PRESS",
+          "DB_FRONT_RAISE"
+        ]
+      },
+      {
+        "id": "SIDE_DELT",
+        "display_name": "Side Delt",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "DB_LATERAL_RAISE",
+          "CABLE_LATERAL_RAISE"
+        ]
+      },
+      {
+        "id": "REAR_DELT",
+        "display_name": "Rear Delt",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "CABLE_FACE_PULL",
+          "DB_REAR_DELT_FLY"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 4,
+      "MEV": 8,
+      "MAV": 14,
+      "MRV": 22
+    }
+  },
+  {
+    "id": "ARMS",
+    "name": "Arms",
+    "antagonist": null,
+    "target_zones": [
+      {
+        "id": "BICEPS_LONG",
+        "display_name": "Biceps Long Head",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "INCLINE_DB_CURL",
+          "HAMMER_CURL",
+          "BB_CURL"
+        ]
+      },
+      {
+        "id": "BICEPS_SHORT",
+        "display_name": "Biceps Short Head",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "PREACHER_CURL",
+          "BB_CURL",
+          "DB_CURL"
+        ]
+      },
+      {
+        "id": "BRACHIALIS",
+        "display_name": "Brachialis",
+        "preferred_force": [
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "HAMMER_CURL"
+        ]
+      },
+      {
+        "id": "TRICEPS_LONG",
+        "display_name": "Triceps Long Head",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "OVERHEAD_TRICEP_EXTENSION",
+          "SKULL_CRUSHER"
+        ]
+      },
+      {
+        "id": "TRICEPS_LATERAL",
+        "display_name": "Triceps Lateral",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "CABLE_TRICEP_PUSHDOWN",
+          "DIP_TRICEPS",
+          "DB_TRICEPS_KICKBACK"
+        ]
+      },
+      {
+        "id": "TRICEPS_MEDIAL",
+        "display_name": "Triceps Medial",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "CLOSE_GRIP_BENCH_PRESS"
+        ]
+      },
+      {
+        "id": "FOREARMS",
+        "display_name": "Forearms",
+        "preferred_force": [
+          "CARRY"
+        ],
+        "stimulus_priority": [
+          "HAMMER_CURL",
+          "BB_CURL"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 4,
+      "MEV": 6,
+      "MAV": 12,
+      "MRV": 20
+    }
+  },
+  {
+    "id": "LEGS",
+    "name": "Legs",
+    "antagonist": null,
+    "target_zones": [
+      {
+        "id": "QUADS",
+        "display_name": "Quadriceps",
+        "preferred_force": [
+          "SQUAT",
+          "LUNGE"
+        ],
+        "stimulus_priority": [
+          "BB_BACK_SQUAT",
+          "BB_FRONT_SQUAT",
+          "LEG_PRESS",
+          "HACK_SQUAT_MACHINE",
+          "LEG_EXTENSION_MACHINE"
+        ]
+      },
+      {
+        "id": "HAMSTRINGS",
+        "display_name": "Hamstrings",
+        "preferred_force": [
+          "HINGE",
+          "PULL"
+        ],
+        "stimulus_priority": [
+          "BB_RDL",
+          "DB_RDL",
+          "LEG_CURL_MACHINE"
+        ]
+      },
+      {
+        "id": "GLUTES",
+        "display_name": "Glutes",
+        "preferred_force": [
+          "HINGE",
+          "SQUAT"
+        ],
+        "stimulus_priority": [
+          "BB_HIP_THRUST",
+          "BB_RDL",
+          "DB_WALKING_LUNGE",
+          "BULGARIAN_SPLIT_SQUAT"
+        ]
+      },
+      {
+        "id": "CALVES",
+        "display_name": "Calves",
+        "preferred_force": [
+          "PUSH"
+        ],
+        "stimulus_priority": [
+          "STANDING_CALF_RAISE",
+          "SEATED_CALF_RAISE"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 6,
+      "MEV": 8,
+      "MAV": 14,
+      "MRV": 20
+    }
+  },
+  {
+    "id": "CORE",
+    "name": "Core",
+    "antagonist": null,
+    "target_zones": [
+      {
+        "id": "RECTUS_ABDOMINIS",
+        "display_name": "Rectus Abdominis",
+        "preferred_force": [
+          "PULL",
+          "STATIC"
+        ],
+        "stimulus_priority": [
+          "CABLE_CRUNCH",
+          "HANGING_LEG_RAISE"
+        ]
+      },
+      {
+        "id": "OBLIQUES",
+        "display_name": "Obliques",
+        "preferred_force": [
+          "ROTATION",
+          "STATIC"
+        ],
+        "stimulus_priority": [
+          "PALLOF_PRESS",
+          "BAND_PALLOF_PRESS",
+          "SIDE_PLANK"
+        ]
+      },
+      {
+        "id": "TRANSVERSE",
+        "display_name": "Transverse Abdominis",
+        "preferred_force": [
+          "STATIC"
+        ],
+        "stimulus_priority": [
+          "PLANK",
+          "AB_WHEEL_ROLLOUT"
+        ]
+      },
+      {
+        "id": "LOWER_BACK_STAB",
+        "display_name": "Erectors (Stabilizer)",
+        "preferred_force": [
+          "STATIC"
+        ],
+        "stimulus_priority": [
+          "AB_WHEEL_ROLLOUT"
+        ]
+      }
+    ],
+    "weekly_volume_landmarks": {
+      "MV": 0,
+      "MEV": 6,
+      "MAV": 12,
+      "MRV": 20
+    }
+  }
+]

@@ -1,0 +1,1648 @@
+[
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "FRONT_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "MASS_BUILDER",
+      "POWERLIFT"
+    ],
+    "contraindications": [],
+    "swap_candidates": [
+      "DB_FLAT_BENCH_PRESS",
+      "PUSH_UP"
+    ],
+    "instruction_cues": [],
+    "id": "BB_BENCH_PRESS",
+    "name": "Barbell Bench Press",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "MID_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BARBELL",
+      "BENCH",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "FRONT_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "MASS_BUILDER"
+    ],
+    "contraindications": [],
+    "swap_candidates": [
+      "DB_INCLINE_BENCH_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "BB_INCLINE_BENCH_PRESS",
+    "name": "Barbell Incline Bench Press",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "UPPER_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BARBELL",
+      "BENCH",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "DIP_CHEST"
+    ],
+    "instruction_cues": [],
+    "id": "BB_DECLINE_BENCH_PRESS",
+    "name": "Barbell Decline Bench Press",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "LOWER_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BARBELL",
+      "BENCH",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "FRONT_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "BB_BENCH_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "DB_FLAT_BENCH_PRESS",
+    "name": "Dumbbell Flat Bench Press",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "MID_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "FRONT_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "BB_INCLINE_BENCH_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "DB_INCLINE_BENCH_PRESS",
+    "name": "Dumbbell Incline Bench Press",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "UPPER_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "WRIST_HYPEREXTENSION"
+    ],
+    "swap_candidates": [
+      "BB_DECLINE_BENCH_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "DIP_CHEST",
+    "name": "Chest Dip",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "LOWER_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DIP_BAR",
+      "BODYWEIGHT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "CORE"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "TRANSVERSE"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "BEGINNER_FRIENDLY"
+    ],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "PUSH_UP",
+    "name": "Push-Up",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "MID_CHEST",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BODYWEIGHT"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 4,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "PEC_DECK_FLY",
+      "DB_INCLINE_FLY"
+    ],
+    "instruction_cues": [],
+    "id": "CABLE_CHEST_FLY",
+    "name": "Cable Chest Fly",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "MID_CHEST",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "CABLE_CHEST_FLY"
+    ],
+    "instruction_cues": [],
+    "id": "PEC_DECK_FLY",
+    "name": "Pec Deck Fly",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "MID_CHEST",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "SELECTORIZED_MACHINE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "CABLE_CHEST_FLY"
+    ],
+    "instruction_cues": [],
+    "id": "DB_INCLINE_FLY",
+    "name": "Dumbbell Incline Fly",
+    "primary_muscle_group": "CHEST",
+    "primary_target_zone": "UPPER_CHEST",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 4,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "LEGS",
+      "BACK"
+    ],
+    "secondary_target_zones": [
+      "HAMSTRINGS",
+      "GLUTES",
+      "LATS_THICKNESS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "POWERLIFT",
+      "POSTERIOR_CHAIN"
+    ],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD",
+      "VALSALVA_HEAVY"
+    ],
+    "swap_candidates": [
+      "BB_RDL",
+      "RACK_PULL"
+    ],
+    "instruction_cues": [],
+    "id": "BB_DEADLIFT",
+    "name": "Conventional Barbell Deadlift",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LOWER_BACK",
+    "mechanics": "COMPOUND",
+    "force": "HINGE",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "ADVANCED",
+    "fatigue_index": 10,
+    "default_tempo": "2-0-X-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "BACK",
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "MID_BACK",
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD"
+    ],
+    "swap_candidates": [
+      "T_BAR_ROW",
+      "DB_ONE_ARM_ROW"
+    ],
+    "instruction_cues": [],
+    "id": "BB_BENT_OVER_ROW",
+    "name": "Barbell Bent-Over Row",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LATS_THICKNESS",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "BACK",
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "MID_BACK",
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "BB_BENT_OVER_ROW"
+    ],
+    "instruction_cues": [],
+    "id": "DB_ONE_ARM_ROW",
+    "name": "One-Arm Dumbbell Row",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LATS_THICKNESS",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 5,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "BACK",
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "LATS_THICKNESS",
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD"
+    ],
+    "swap_candidates": [
+      "BB_BENT_OVER_ROW"
+    ],
+    "instruction_cues": [],
+    "id": "T_BAR_ROW",
+    "name": "T-Bar Row",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "MID_BACK",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "BACK"
+    ],
+    "secondary_target_zones": [
+      "BICEPS_LONG",
+      "MID_BACK"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "LAT_PULLDOWN_WIDE",
+      "CHIN_UP"
+    ],
+    "instruction_cues": [],
+    "id": "PULL_UP",
+    "name": "Pull-Up",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LATS_WIDTH",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "PULL_UP_BAR",
+      "BODYWEIGHT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "BICEPS_SHORT",
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "PULL_UP",
+      "LAT_PULLDOWN_WIDE"
+    ],
+    "instruction_cues": [],
+    "id": "CHIN_UP",
+    "name": "Chin-Up",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LATS_WIDTH",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "PULL_UP_BAR",
+      "BODYWEIGHT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "PULL_UP"
+    ],
+    "instruction_cues": [],
+    "id": "LAT_PULLDOWN_WIDE",
+    "name": "Wide-Grip Lat Pulldown",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LATS_WIDTH",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "LAT_PULLDOWN"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 5,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "BACK"
+    ],
+    "secondary_target_zones": [
+      "BICEPS_LONG",
+      "LATS_THICKNESS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "DB_ONE_ARM_ROW"
+    ],
+    "instruction_cues": [],
+    "id": "SEATED_CABLE_ROW",
+    "name": "Seated Cable Row",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "MID_BACK",
+    "mechanics": "COMPOUND",
+    "force": "PULL",
+    "required_equipment": [
+      "SEATED_ROW"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 5,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "BACK"
+    ],
+    "secondary_target_zones": [
+      "MID_BACK",
+      "UPPER_TRAPS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "SHOULDER_HEALTH"
+    ],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "CABLE_FACE_PULL",
+    "name": "Cable Face Pull",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "REAR_DELT",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BB_SHRUG",
+    "name": "Barbell Shrug",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "UPPER_TRAPS",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "BACK",
+      "LEGS"
+    ],
+    "secondary_target_zones": [
+      "LATS_THICKNESS",
+      "HAMSTRINGS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD"
+    ],
+    "swap_candidates": [
+      "BB_DEADLIFT"
+    ],
+    "instruction_cues": [],
+    "id": "RACK_PULL",
+    "name": "Rack Pull",
+    "primary_muscle_group": "BACK",
+    "primary_target_zone": "LOWER_BACK",
+    "mechanics": "COMPOUND",
+    "force": "HINGE",
+    "required_equipment": [
+      "BARBELL",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "SIDE_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "POWERLIFT"
+    ],
+    "contraindications": [
+      "OVERHEAD_PRESSING"
+    ],
+    "swap_candidates": [
+      "DB_SHOULDER_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "BB_OVERHEAD_PRESS",
+    "name": "Barbell Overhead Press",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "FRONT_DELT",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BARBELL",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "TRICEPS_LATERAL",
+      "SIDE_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "OVERHEAD_PRESSING"
+    ],
+    "swap_candidates": [
+      "BB_OVERHEAD_PRESS",
+      "ARNOLD_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "DB_SHOULDER_PRESS",
+    "name": "Seated Dumbbell Shoulder Press",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "FRONT_DELT",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "SHOULDERS",
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "SIDE_DELT",
+      "TRICEPS_LATERAL"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "OVERHEAD_PRESSING"
+    ],
+    "swap_candidates": [
+      "DB_SHOULDER_PRESS"
+    ],
+    "instruction_cues": [],
+    "id": "ARNOLD_PRESS",
+    "name": "Arnold Press",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "FRONT_DELT",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "CABLE_LATERAL_RAISE"
+    ],
+    "instruction_cues": [],
+    "id": "DB_LATERAL_RAISE",
+    "name": "Dumbbell Lateral Raise",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "SIDE_DELT",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "DB_LATERAL_RAISE"
+    ],
+    "instruction_cues": [],
+    "id": "CABLE_LATERAL_RAISE",
+    "name": "Cable Lateral Raise",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "SIDE_DELT",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "FRONTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "CABLE_FACE_PULL"
+    ],
+    "instruction_cues": [],
+    "id": "DB_REAR_DELT_FLY",
+    "name": "Dumbbell Rear Delt Fly",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "REAR_DELT",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DB_FRONT_RAISE",
+    "name": "Dumbbell Front Raise",
+    "primary_muscle_group": "SHOULDERS",
+    "primary_target_zone": "FRONT_DELT",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "ARMS"
+    ],
+    "secondary_target_zones": [
+      "BICEPS_LONG",
+      "FOREARMS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "WRIST_HYPEREXTENSION"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BB_CURL",
+    "name": "Barbell Curl",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "BICEPS_SHORT",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 4,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "BICEPS_LONG"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DB_CURL",
+    "name": "Dumbbell Curl",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "BICEPS_SHORT",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "BICEPS_LONG",
+      "FOREARMS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "HAMMER_CURL",
+    "name": "Hammer Curl",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "BRACHIALIS",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "PREACHER_CURL",
+    "name": "Preacher Curl",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "BICEPS_SHORT",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "EZ_BAR",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 4,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "INCLINE_DB_CURL",
+    "name": "Incline Dumbbell Curl",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "BICEPS_LONG",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "CHEST",
+      "SHOULDERS"
+    ],
+    "secondary_target_zones": [
+      "MID_CHEST",
+      "FRONT_DELT"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "WRIST_HYPEREXTENSION"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "CLOSE_GRIP_BENCH_PRESS",
+    "name": "Close-Grip Bench Press",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_MEDIAL",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "BARBELL",
+      "BENCH",
+      "RACK"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "CABLE_TRICEP_PUSHDOWN",
+    "name": "Cable Tricep Pushdown",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_LATERAL",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [
+      "OVERHEAD_PRESSING"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "OVERHEAD_TRICEP_EXTENSION",
+    "name": "Overhead Dumbbell Tricep Extension",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_LONG",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "SKULL_CRUSHER",
+    "name": "EZ-Bar Skull Crusher",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_LONG",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "EZ_BAR",
+      "BENCH"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 4,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "CHEST"
+    ],
+    "secondary_target_zones": [
+      "LOWER_CHEST"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "WRIST_HYPEREXTENSION"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DIP_TRICEPS",
+    "name": "Triceps Dip (Upright)",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_LATERAL",
+    "mechanics": "COMPOUND",
+    "force": "PUSH",
+    "required_equipment": [
+      "DIP_BAR",
+      "BODYWEIGHT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DB_TRICEPS_KICKBACK",
+    "name": "Dumbbell Triceps Kickback",
+    "primary_muscle_group": "ARMS",
+    "primary_target_zone": "TRICEPS_LATERAL",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "LEGS",
+      "CORE"
+    ],
+    "secondary_target_zones": [
+      "GLUTES",
+      "HAMSTRINGS",
+      "LOWER_BACK_STAB"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [
+      "POWERLIFT",
+      "MASS_BUILDER"
+    ],
+    "contraindications": [
+      "DEEP_KNEE_FLEXION",
+      "HIGH_LUMBAR_LOAD",
+      "VALSALVA_HEAVY"
+    ],
+    "swap_candidates": [
+      "LEG_PRESS",
+      "HACK_SQUAT_MACHINE"
+    ],
+    "instruction_cues": [],
+    "id": "BB_BACK_SQUAT",
+    "name": "Barbell Back Squat",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "SQUAT",
+    "required_equipment": [
+      "BARBELL",
+      "RACK"
+    ],
+    "difficulty": "ADVANCED",
+    "fatigue_index": 10,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "CORE",
+      "LEGS"
+    ],
+    "secondary_target_zones": [
+      "LOWER_BACK_STAB",
+      "GLUTES"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "DEEP_KNEE_FLEXION",
+      "WRIST_HYPEREXTENSION"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BB_FRONT_SQUAT",
+    "name": "Barbell Front Squat",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "SQUAT",
+    "required_equipment": [
+      "BARBELL",
+      "RACK"
+    ],
+    "difficulty": "ADVANCED",
+    "fatigue_index": 9,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "DEEP_HIP_FLEXION"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "LEG_PRESS",
+    "name": "Leg Press",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "SQUAT",
+    "required_equipment": [
+      "LEG_PRESS"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 7,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "HACK_SQUAT_MACHINE",
+    "name": "Machine Hack Squat",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "SQUAT",
+    "required_equipment": [
+      "HACK_SQUAT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 7,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [
+      "LEGS",
+      "BACK"
+    ],
+    "secondary_target_zones": [
+      "GLUTES",
+      "LOWER_BACK"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD"
+    ],
+    "swap_candidates": [
+      "DB_RDL"
+    ],
+    "instruction_cues": [],
+    "id": "BB_RDL",
+    "name": "Barbell Romanian Deadlift",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "HAMSTRINGS",
+    "mechanics": "COMPOUND",
+    "force": "HINGE",
+    "required_equipment": [
+      "BARBELL"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 8,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES",
+      "LOWER_BACK"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [
+      "BB_RDL"
+    ],
+    "instruction_cues": [],
+    "id": "DB_RDL",
+    "name": "Dumbbell Romanian Deadlift",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "HAMSTRINGS",
+    "mechanics": "COMPOUND",
+    "force": "HINGE",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 6,
+    "default_tempo": "3-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES",
+      "HAMSTRINGS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DB_WALKING_LUNGE",
+    "name": "Dumbbell Walking Lunge",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "LUNGE",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 6,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "HAMSTRINGS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BB_HIP_THRUST",
+    "name": "Barbell Hip Thrust",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "GLUTES",
+    "mechanics": "COMPOUND",
+    "force": "HINGE",
+    "required_equipment": [
+      "BARBELL",
+      "BENCH"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 6,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "LEG_CURL_MACHINE",
+    "name": "Lying Leg Curl",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "HAMSTRINGS",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "LEG_CURL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "LEG_EXTENSION_MACHINE",
+    "name": "Leg Extension",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "LEG_EXTENSION"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "STANDING_CALF_RAISE",
+    "name": "Standing Calf Raise",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "CALVES",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "CALF_RAISE_MACHINE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-2-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "STRETCH_FOCUS",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "SEATED_CALF_RAISE",
+    "name": "Seated Calf Raise",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "CALVES",
+    "mechanics": "ISOLATION",
+    "force": "PUSH",
+    "required_equipment": [
+      "CALF_RAISE_MACHINE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-2-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "DB_GOBLET_SQUAT",
+    "name": "Dumbbell Goblet Squat",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "SQUAT",
+    "required_equipment": [
+      "DUMBBELL"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 5,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "GLUTES"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BULGARIAN_SPLIT_SQUAT",
+    "name": "Bulgarian Split Squat",
+    "primary_muscle_group": "LEGS",
+    "primary_target_zone": "QUADS",
+    "mechanics": "COMPOUND",
+    "force": "LUNGE",
+    "required_equipment": [
+      "DUMBBELL",
+      "BENCH"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 6,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "RECTUS_ABDOMINIS"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "PLANK",
+    "name": "Front Plank",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "TRANSVERSE",
+    "mechanics": "ISOLATION",
+    "force": "STATIC",
+    "required_equipment": [
+      "BODYWEIGHT"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "0-X-0-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "SIDE_PLANK",
+    "name": "Side Plank",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "OBLIQUES",
+    "mechanics": "ISOLATION",
+    "force": "STATIC",
+    "required_equipment": [
+      "BODYWEIGHT"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "0-X-0-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "TRANSVERSE"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "HANGING_LEG_RAISE",
+    "name": "Hanging Leg Raise",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "RECTUS_ABDOMINIS",
+    "mechanics": "ISOLATION",
+    "force": "PULL",
+    "required_equipment": [
+      "PULL_UP_BAR",
+      "BODYWEIGHT"
+    ],
+    "difficulty": "INTERMEDIATE",
+    "fatigue_index": 4,
+    "default_tempo": "2-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "CABLE_CRUNCH",
+    "name": "Cable Crunch",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "RECTUS_ABDOMINIS",
+    "mechanics": "ISOLATION",
+    "force": "STATIC",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 3,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "RECTUS_ABDOMINIS",
+      "LOWER_BACK_STAB"
+    ],
+    "movement_plane": "SAGITTAL",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [
+      "HIGH_LUMBAR_LOAD"
+    ],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "AB_WHEEL_ROLLOUT",
+    "name": "Ab Wheel Rollout",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "TRANSVERSE",
+    "mechanics": "ISOLATION",
+    "force": "STATIC",
+    "required_equipment": [
+      "BODYWEIGHT"
+    ],
+    "difficulty": "ADVANCED",
+    "fatigue_index": 5,
+    "default_tempo": "3-0-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [
+      "TRANSVERSE"
+    ],
+    "movement_plane": "TRANSVERSE",
+    "rom_priority": "FULL",
+    "tags": [
+      "ANTI_ROTATION"
+    ],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "PALLOF_PRESS",
+    "name": "Cable Pallof Press",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "OBLIQUES",
+    "mechanics": "ISOLATION",
+    "force": "ROTATION",
+    "required_equipment": [
+      "CABLE"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  },
+  {
+    "secondary_muscle_groups": [],
+    "secondary_target_zones": [],
+    "movement_plane": "TRANSVERSE",
+    "rom_priority": "FULL",
+    "tags": [],
+    "contraindications": [],
+    "swap_candidates": [],
+    "instruction_cues": [],
+    "id": "BAND_PALLOF_PRESS",
+    "name": "Band Pallof Press",
+    "primary_muscle_group": "CORE",
+    "primary_target_zone": "OBLIQUES",
+    "mechanics": "ISOLATION",
+    "force": "ROTATION",
+    "required_equipment": [
+      "RESISTANCE_BAND"
+    ],
+    "difficulty": "BEGINNER",
+    "fatigue_index": 2,
+    "default_tempo": "2-1-1-0"
+  }
+]
