@@ -1,29 +1,48 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import type { Session } from "@supabase/supabase-js";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
+import type { AuthUser } from "../types/auth";
+
 type AuthState = {
-  userId: string | null;
-  accessToken: string | null;
-  setSession: (payload: { userId: string; accessToken: string }) => void;
+  user: AuthUser | null;
+  isInitialized: boolean;
+  setSession: (session: Session | null) => void;
+  setInitialized: (isInitialized: boolean) => void;
   clearSession: () => void;
+};
+
+const sessionToAuthUser = (session: Session | null): AuthUser | null => {
+  if (!session?.user) {
+    return null;
+  }
+
+  return {
+    id: session.user.id,
+    email: session.user.email ?? null
+  };
 };
 
 export const useAuthStore = create<AuthState>()(
   persist(
     (set) => ({
-      userId: null,
-      accessToken: null,
-      setSession: ({ userId, accessToken }) => {
-        set({ userId, accessToken });
+      user: null,
+      isInitialized: false,
+      setSession: (session) => {
+        set({ user: sessionToAuthUser(session) });
+      },
+      setInitialized: (isInitialized) => {
+        set({ isInitialized });
       },
       clearSession: () => {
-        set({ userId: null, accessToken: null });
+        set({ user: null });
       }
     }),
     {
       name: "gymbro-auth",
-      storage: createJSONStorage(() => AsyncStorage)
+      storage: createJSONStorage(() => AsyncStorage),
+      partialize: (state) => ({ user: state.user })
     }
   )
 );

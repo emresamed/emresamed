@@ -1,7 +1,8 @@
 import type { Exercise } from "../../types/domain";
-import { supabase } from "../supabase/client";
+import { getSupabaseClient } from "../supabase/client";
 
 export const listExercises = async (): Promise<Exercise[]> => {
+  const supabase = getSupabaseClient();
   const { data, error } = await supabase
     .from("exercises")
     .select("id, name, muscle_group_id, equipment, difficulty")

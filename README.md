@@ -1,6 +1,6 @@
 # GymBro (Expo + TypeScript)
 
-GymBro is a modern fitness mobile app foundation built with clean, modular architecture for scalable feature-by-feature delivery.
+GymBro is a modern fitness mobile app built with clean, modular architecture for scalable feature-by-feature delivery.
 
 ## Tech Stack
 
@@ -13,63 +13,81 @@ GymBro is a modern fitness mobile app foundation built with clean, modular archi
 - Supabase (PostgreSQL backend)
 - Lucide React Native
 
+## Current Scope
+
+- ✅ Phase 1: Project foundation
+- ✅ Phase 2: Authentication system (login, register, forgot password, session persistence, protected routes)
+
 ## Project Structure
 
 ```txt
 app/
-  _layout.tsx                 # Root navigation + providers
+  _layout.tsx                      # Root providers + auth route guard
+  (auth)/
+    _layout.tsx                    # Auth stack layout
+    sign-in.tsx                    # Login screen
+    sign-up.tsx                    # Register screen
+    forgot-password.tsx            # Password reset screen
   (tabs)/
-    _layout.tsx               # Bottom tab navigator
-    index.tsx                 # Home (placeholder)
-    programs.tsx              # Programs (placeholder)
-    exercises.tsx             # Exercise explorer (placeholder)
-    tracker.tsx               # Workout tracker (placeholder)
-    profile.tsx               # Profile (placeholder)
+    _layout.tsx                    # Bottom tab navigator (protected)
+    index.tsx
+    programs.tsx
+    exercises.tsx
+    tracker.tsx
+    profile.tsx
 
 src/
   app/providers/
-    app-providers.tsx         # Global providers (React Query + SafeArea)
+    app-providers.tsx              # Global providers (React Query + SafeArea)
 
   components/
-    navigation/tab-icon.tsx   # Reusable tab icon adapter
+    forms/
+      form-input.tsx               # Reusable form input
+      form-message.tsx             # Reusable inline status/error message
+      primary-button.tsx           # Reusable action button with loading state
+    navigation/
+      tab-icon.tsx                 # Reusable tab icon adapter
     ui/
-      screen.tsx              # Reusable safe screen wrapper
-      section-card.tsx        # Reusable rounded card component
+      screen.tsx                   # Reusable safe screen wrapper
+      section-card.tsx             # Reusable rounded card component
 
   config/
-    env.ts                    # Environment variable access
-    query-client.ts           # React Query client setup
+    env.ts                         # Environment variable access
+    query-client.ts                # React Query client setup
 
   constants/
-    query-keys.ts             # Central query key registry
-    theme.ts                  # App color + spacing tokens
+    query-keys.ts                  # Central query key registry
+    theme.ts                       # App color + spacing tokens
 
   features/
+    auth/
+      hooks/
+        use-auth-state.ts          # Read auth status/user from store
+        use-auth-session.ts        # Sync Supabase session -> Zustand
+        use-auth-mutations.ts      # Sign-in/up/reset/sign-out mutations
+      validation/
+        auth-validation.ts         # Reusable auth form validation
     programs/hooks/
-      use-workout-programs.ts # Feature-level query hook
+      use-workout-programs.ts
     exercises/hooks/
-      use-exercises.ts        # Feature-level query hook
+      use-exercises.ts
 
   services/
-    supabase/client.ts        # Supabase client singleton
+    supabase/client.ts             # Supabase client singleton + config guard
+    auth/auth.service.ts           # Auth API layer
     programs/programs.service.ts
     exercises/exercises.service.ts
 
   store/
-    auth.store.ts             # Persistent auth state scaffold
-    workout-session.store.ts  # Workout session scaffold
+    auth.store.ts                  # Persistent auth state scaffold
+    workout-session.store.ts       # Workout session scaffold
 
   types/
-    domain.ts                 # Core domain model types
+    auth.ts                        # Auth-specific types
+    domain.ts                      # Core domain model types
 
   utils/
-    cn.ts                     # Classname merge helper
-
-.env.example                 # Required env keys
-global.css                   # Tailwind directives
-tailwind.config.js           # Tailwind + dark theme tokens
-babel.config.js              # Expo + NativeWind + Router
-metro.config.js              # NativeWind metro integration
+    cn.ts                          # Classname merge helper
 ```
 
 ## Environment
@@ -87,4 +105,4 @@ metro.config.js              # NativeWind metro integration
 
 ## Notes
 
-This repository currently includes **Phase 1 foundation only**. Feature implementation (Auth, DB schema, main data UI, tracker, progress) will be built incrementally in later phases.
+GymBro is intentionally developed in phases to keep architecture clean and maintainable as features expand.
