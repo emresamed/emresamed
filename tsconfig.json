@@ -1,0 +1,28 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "jsx": "react-native",
+    "moduleResolution": "bundler",
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "@app/*": ["src/app/*"],
+      "@features/*": ["src/features/*"],
+      "@services/*": ["src/services/*"],
+      "@shared/*": ["src/shared/*"],
+      "@stores/*": ["src/stores/*"],
+      "@types/*": ["src/types/*"]
+    },
+    "strict": true
+  },
+  "include": [
+    "app",
+    "src",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "*.config.js",
+    "*.config.ts"
+  ]
+}
