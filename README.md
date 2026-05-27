@@ -14,7 +14,9 @@ features without rewriting the app structure.
 ```txt
 app/                         Expo Router route files and layout boundaries
   _layout.tsx                Root providers and stack shell
-  (tabs)/                    Main mobile tab navigation
+  (auth)/                    Public authentication routes
+  (app)/                     Protected application routes
+    (tabs)/                  Main mobile tab navigation
 src/
   app/                       App-level providers and navigation metadata
   features/                  Feature slices grouped by business area
@@ -33,3 +35,9 @@ src/
 ## Environment
 
 Copy `.env.example` to `.env` and provide Supabase values before enabling API-backed features.
+
+## Phase 2 authentication
+
+Authentication is isolated in `src/features/auth` with Supabase calls kept in
+`src/services/supabase`. Protected navigation lives at the `(app)` route-group boundary so
+individual feature screens do not need to duplicate session checks.
