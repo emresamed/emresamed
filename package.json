@@ -8,7 +8,7 @@
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "start": "node dist/index.js",
     "test": "vitest run",
-    "start:expo-web": "expo start --web --host 0.0.0.0 --port 8081 --non-interactive"
+    "start:expo-web": "CI=1 expo start --web --host localhost --port 8081"
   },
   "repository": {
     "type": "git",
