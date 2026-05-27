@@ -3,9 +3,11 @@
     "rootDir": "src",
     "outDir": "dist",
     "module": "commonjs",
+    "moduleResolution": "node",
     "target": "es2022",
     "lib": ["es2022"],
-    "types": ["node"],
+    "types": ["node", "react"],
+    "jsx": "react-jsx",
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
@@ -16,5 +18,5 @@
     "esModuleInterop": true,
     "resolveJsonModule": true
   },
-  "include": ["src/**/*.ts"]
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
