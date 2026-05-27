@@ -1,0 +1,126 @@
+import { VolumePrescription, BodyType, Goal } from '../types';
+
+// All 9 body type × goal combinations, seeded from the Stage 1 Volume Matrix.
+export const VOLUME_MATRIX: VolumePrescription[] = [
+  {
+    bodyType: 'ECTOMORPH',
+    goal: 'STRENGTH',
+    sets: 4,
+    repRangeLow: 1,
+    repRangeHigh: 5,
+    restSeconds: 240,
+    rpeTarget: 9,
+    intensityPctMin: 90,
+    intensityPctMax: 100,
+    progressionModel: 'LINEAR',
+  },
+  {
+    bodyType: 'ECTOMORPH',
+    goal: 'HYPERTROPHY',
+    sets: 3,
+    repRangeLow: 6,
+    repRangeHigh: 10,
+    restSeconds: 120,
+    rpeTarget: 8,
+    intensityPctMin: 70,
+    intensityPctMax: 80,
+    progressionModel: 'DOUBLE_PROGRESSIVE',
+  },
+  {
+    bodyType: 'ECTOMORPH',
+    goal: 'FAT_LOSS',
+    sets: 3,
+    repRangeLow: 10,
+    repRangeHigh: 15,
+    restSeconds: 60,
+    rpeTarget: 7,
+    intensityPctMin: 55,
+    intensityPctMax: 65,
+    progressionModel: 'VOLUME_PROGRESSIVE',
+  },
+  {
+    bodyType: 'MESOMORPH',
+    goal: 'STRENGTH',
+    sets: 5,
+    repRangeLow: 1,
+    repRangeHigh: 5,
+    restSeconds: 210,
+    rpeTarget: 9,
+    intensityPctMin: 87,
+    intensityPctMax: 100,
+    progressionModel: 'LINEAR',
+  },
+  {
+    bodyType: 'MESOMORPH',
+    goal: 'HYPERTROPHY',
+    sets: 4,
+    repRangeLow: 8,
+    repRangeHigh: 12,
+    restSeconds: 90,
+    rpeTarget: 8,
+    intensityPctMin: 67,
+    intensityPctMax: 82,
+    progressionModel: 'DOUBLE_PROGRESSIVE',
+  },
+  {
+    bodyType: 'MESOMORPH',
+    goal: 'FAT_LOSS',
+    sets: 4,
+    repRangeLow: 12,
+    repRangeHigh: 16,
+    restSeconds: 45,
+    rpeTarget: 7,
+    intensityPctMin: 52,
+    intensityPctMax: 65,
+    progressionModel: 'VOLUME_PROGRESSIVE',
+  },
+  {
+    bodyType: 'ENDOMORPH',
+    goal: 'STRENGTH',
+    sets: 4,
+    repRangeLow: 3,
+    repRangeHigh: 5,
+    restSeconds: 180,
+    rpeTarget: 8,
+    intensityPctMin: 85,
+    intensityPctMax: 95,
+    progressionModel: 'LINEAR',
+  },
+  {
+    bodyType: 'ENDOMORPH',
+    goal: 'HYPERTROPHY',
+    sets: 4,
+    repRangeLow: 10,
+    repRangeHigh: 15,
+    restSeconds: 75,
+    rpeTarget: 8,
+    intensityPctMin: 65,
+    intensityPctMax: 78,
+    progressionModel: 'DOUBLE_PROGRESSIVE',
+  },
+  {
+    bodyType: 'ENDOMORPH',
+    goal: 'FAT_LOSS',
+    sets: 4,
+    repRangeLow: 15,
+    repRangeHigh: 20,
+    restSeconds: 30,
+    rpeTarget: 7,
+    intensityPctMin: 50,
+    intensityPctMax: 62,
+    progressionModel: 'VOLUME_PROGRESSIVE',
+  },
+];
+
+export const getVolumePrescription = (
+  bodyType: BodyType,
+  goal: Goal,
+): VolumePrescription => {
+  const prescription = VOLUME_MATRIX.find(
+    (v) => v.bodyType === bodyType && v.goal === goal,
+  );
+  if (!prescription) {
+    throw new Error(`No prescription found for ${bodyType} / ${goal}`);
+  }
+  return prescription;
+};
