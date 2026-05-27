@@ -1,0 +1,69 @@
+{
+  "$id": "AlgorithmConfig",
+  "version": "1.0.0",
+  "bodyTypeMultipliers": {
+    "ectomorph": { "volume": 0.85, "rest": 1.15, "intensityOffset": -3 },
+    "mesomorph": { "volume": 1.0, "rest": 1.0, "intensityOffset": 0 },
+    "endomorph": { "volume": 0.9, "rest": 0.9, "intensityOffset": -2 }
+  },
+  "goalPresets": {
+    "strength": {
+      "sets": [4, 5],
+      "reps": [3, 6],
+      "rpe": [8, 9],
+      "rest": [150, 240],
+      "intensity": [80, 92]
+    },
+    "hypertrophy": {
+      "sets": [3, 4],
+      "reps": [8, 12],
+      "rpe": [7, 8],
+      "rest": [60, 90],
+      "intensity": [65, 80]
+    },
+    "fat_loss": {
+      "sets": [3, 3],
+      "reps": [12, 15],
+      "rpe": [7, 8],
+      "rest": [30, 60],
+      "intensity": [55, 70]
+    },
+    "endurance": {
+      "sets": [2, 3],
+      "reps": [15, 25],
+      "rpe": [6, 7],
+      "rest": [30, 45],
+      "intensity": [40, 60]
+    }
+  },
+  "weeklyVolumeBase": {
+    "chest": 12,
+    "back": 14,
+    "legs": 16,
+    "shoulders": 10,
+    "arms": 8,
+    "core": 6
+  },
+  "daysPerWeekFactor": {
+    "2": 0.7,
+    "3": 0.85,
+    "4": 1.0,
+    "5": 1.1,
+    "6": 1.15
+  },
+  "progression": {
+    "microcycleWeeks": 2,
+    "upperBodyLoadIncreasePercent": 2.5,
+    "lowerBodyLoadIncreasePercent": 5,
+    "loadDecreasePercent": 5,
+    "deloadWeek": 6,
+    "deloadVolumeMultiplier": 0.6
+  },
+  "selectionRules": {
+    "compoundIsolationRatio": "2:1",
+    "strengthCompoundMinPercent": 75,
+    "fatLossCompoundMinPercent": 60,
+    "recentUsePenaltyDays": 7,
+    "recentUsePenaltyScore": 4
+  }
+}

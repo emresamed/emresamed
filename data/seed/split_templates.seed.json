@@ -1,0 +1,1154 @@
+{
+  "version": "1.0.0",
+  "count": 27,
+  "templates": [
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 0,
+      "sessionName": "Push",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest",
+            "mid_chest",
+            "lower_chest"
+          ],
+          "weeklySetBudget": 10
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts"
+          ],
+          "weeklySetBudget": 7
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "triceps"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 1,
+      "sessionName": "Pull",
+      "muscleTargets": [
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back",
+            "traps"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "rear_delts"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 2,
+      "sessionName": "Legs",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "lower_abs"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 0,
+      "sessionName": "Push",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest",
+            "mid_chest",
+            "lower_chest"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "triceps"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 1,
+      "sessionName": "Pull",
+      "muscleTargets": [
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back",
+            "traps"
+          ],
+          "weeklySetBudget": 14
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "rear_delts"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 2,
+      "sessionName": "Legs",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 16
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "lower_abs"
+          ],
+          "weeklySetBudget": 6
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 3,
+      "sessionName": "Push B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest",
+            "mid_chest",
+            "lower_chest"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "triceps"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 4,
+      "sessionName": "Pull B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back",
+            "traps"
+          ],
+          "weeklySetBudget": 14
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "rear_delts"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 6,
+      "dayIndex": 5,
+      "sessionName": "Legs B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 16
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "lower_abs"
+          ],
+          "weeklySetBudget": 6
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 0,
+      "sessionName": "Push",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest",
+            "mid_chest",
+            "lower_chest"
+          ],
+          "weeklySetBudget": 10
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "triceps"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 10
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 1,
+      "sessionName": "Pull",
+      "muscleTargets": [
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back",
+            "traps"
+          ],
+          "weeklySetBudget": 13
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "rear_delts"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 10
+    },
+    {
+      "splitType": "push_pull_legs",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 2,
+      "sessionName": "Legs",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 14
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "lower_abs"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 10
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 0,
+      "sessionName": "Upper",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest",
+            "upper_chest"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back"
+          ],
+          "weeklySetBudget": 10
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 7
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 4,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 1,
+      "sessionName": "Lower",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "obliques"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 0,
+      "sessionName": "Upper",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest",
+            "upper_chest"
+          ],
+          "weeklySetBudget": 10
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back"
+          ],
+          "weeklySetBudget": 12
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 6
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 4,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 1,
+      "sessionName": "Lower",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 16
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "obliques"
+          ],
+          "weeklySetBudget": 6
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 0,
+      "sessionName": "Upper",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest",
+            "upper_chest"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats",
+            "upper_back"
+          ],
+          "weeklySetBudget": 10
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts",
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 4,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "upper_lower",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 1,
+      "sessionName": "Lower",
+      "muscleTargets": [
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "hamstrings",
+            "glutes",
+            "calves"
+          ],
+          "weeklySetBudget": 14
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core",
+            "obliques"
+          ],
+          "weeklySetBudget": 5
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 2,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 12
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 0,
+      "sessionName": "Full Body A",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "glutes"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 1,
+      "sessionName": "Full Body B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "upper_back"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "hamstrings",
+            "calves"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "obliques"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "ectomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 2,
+      "sessionName": "Full Body C",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "lower_chest"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lower_back",
+            "traps"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "lower_abs"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 0,
+      "sessionName": "Full Body A",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "glutes"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 1,
+      "sessionName": "Full Body B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "upper_back"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "hamstrings",
+            "calves"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "obliques"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "mesomorph",
+      "recommendedDaysPerWeek": 3,
+      "dayIndex": 2,
+      "sessionName": "Full Body C",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "lower_chest"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lower_back",
+            "traps"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads"
+          ],
+          "weeklySetBudget": 8
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 6
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "lower_abs"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 0
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 0,
+      "sessionName": "Full Body A",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "mid_chest"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lats"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads",
+            "glutes"
+          ],
+          "weeklySetBudget": 7
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "front_delts"
+          ],
+          "weeklySetBudget": 4
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "deep_core"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 8
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 1,
+      "sessionName": "Full Body B",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "upper_chest"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "upper_back"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "hamstrings",
+            "calves"
+          ],
+          "weeklySetBudget": 7
+        },
+        {
+          "muscleGroup": "arms",
+          "targetZones": [
+            "biceps",
+            "triceps"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "obliques"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 8
+    },
+    {
+      "splitType": "full_body",
+      "bodyType": "endomorph",
+      "recommendedDaysPerWeek": 4,
+      "dayIndex": 2,
+      "sessionName": "Full Body C",
+      "muscleTargets": [
+        {
+          "muscleGroup": "chest",
+          "targetZones": [
+            "lower_chest"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "back",
+          "targetZones": [
+            "lower_back",
+            "traps"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "legs",
+          "targetZones": [
+            "quads"
+          ],
+          "weeklySetBudget": 7
+        },
+        {
+          "muscleGroup": "shoulders",
+          "targetZones": [
+            "side_delts",
+            "rear_delts"
+          ],
+          "weeklySetBudget": 5
+        },
+        {
+          "muscleGroup": "core",
+          "targetZones": [
+            "lower_abs"
+          ],
+          "weeklySetBudget": 4
+        }
+      ],
+      "slotRules": {
+        "compoundCount": 3,
+        "isolationCount": 1,
+        "maxExercises": 8
+      },
+      "conditioningMinutes": 8
+    }
+  ]
+}

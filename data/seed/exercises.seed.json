@@ -1,0 +1,855 @@
+{
+  "version": "1.0.0",
+  "count": 59,
+  "exercises": [
+    {
+      "id": "ex_barbell_bench_press",
+      "name": "Barbell Bench Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders",
+        "arms"
+      ],
+      "targetZone": "mid_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "horizontal_push",
+      "instructions": "Retract scapula, lower bar to mid-chest, press up."
+    },
+    {
+      "id": "ex_incline_barbell_press",
+      "name": "Incline Barbell Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "upper_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "incline_push"
+    },
+    {
+      "id": "ex_decline_barbell_press",
+      "name": "Decline Barbell Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "lower_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "decline_push"
+    },
+    {
+      "id": "ex_dumbbell_bench_press",
+      "name": "Dumbbell Bench Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders",
+        "arms"
+      ],
+      "targetZone": "mid_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_push"
+    },
+    {
+      "id": "ex_incline_dumbbell_press",
+      "name": "Incline Dumbbell Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "upper_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "incline_push"
+    },
+    {
+      "id": "ex_dumbbell_fly",
+      "name": "Dumbbell Fly",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [],
+      "targetZone": "mid_chest",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "fly"
+    },
+    {
+      "id": "ex_cable_crossover",
+      "name": "Cable Crossover",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [],
+      "targetZone": "lower_chest",
+      "mechanics": "isolation",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "fly"
+    },
+    {
+      "id": "ex_pec_deck",
+      "name": "Pec Deck Machine",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [],
+      "targetZone": "mid_chest",
+      "mechanics": "isolation",
+      "equipment": [
+        "machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "fly"
+    },
+    {
+      "id": "ex_push_up",
+      "name": "Push-Up",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders",
+        "core"
+      ],
+      "targetZone": "mid_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_push"
+    },
+    {
+      "id": "ex_chest_dip",
+      "name": "Chest Dip",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "arms",
+        "shoulders"
+      ],
+      "targetZone": "lower_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "decline_push"
+    },
+    {
+      "id": "ex_conventional_deadlift",
+      "name": "Conventional Deadlift",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "legs",
+        "core"
+      ],
+      "targetZone": "lower_back",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "advanced",
+      "movementPattern": "hip_hinge"
+    },
+    {
+      "id": "ex_barbell_row",
+      "name": "Barbell Bent-Over Row",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "upper_back",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "horizontal_pull"
+    },
+    {
+      "id": "ex_pull_up",
+      "name": "Pull-Up",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "lats",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "vertical_pull"
+    },
+    {
+      "id": "ex_lat_pulldown",
+      "name": "Lat Pulldown",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "lats",
+      "mechanics": "compound",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "vertical_pull"
+    },
+    {
+      "id": "ex_seated_cable_row",
+      "name": "Seated Cable Row",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "upper_back",
+      "mechanics": "compound",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_pull"
+    },
+    {
+      "id": "ex_t_bar_row",
+      "name": "T-Bar Row",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "upper_back",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "horizontal_pull"
+    },
+    {
+      "id": "ex_face_pull",
+      "name": "Face Pull",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "traps",
+      "mechanics": "isolation",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_pull"
+    },
+    {
+      "id": "ex_romanian_deadlift",
+      "name": "Romanian Deadlift",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "legs"
+      ],
+      "targetZone": "lower_back",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "hip_hinge"
+    },
+    {
+      "id": "ex_hyperextension",
+      "name": "Back Extension",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "legs"
+      ],
+      "targetZone": "lower_back",
+      "mechanics": "isolation",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "hip_hinge"
+    },
+    {
+      "id": "ex_straight_arm_pulldown",
+      "name": "Straight-Arm Pulldown",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [],
+      "targetZone": "lats",
+      "mechanics": "isolation",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "vertical_pull"
+    },
+    {
+      "id": "ex_barbell_squat",
+      "name": "Barbell Back Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_front_squat",
+      "name": "Front Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "advanced",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_leg_press",
+      "name": "Leg Press",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_walking_lunge",
+      "name": "Walking Lunge",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "glutes",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "lunge_pattern"
+    },
+    {
+      "id": "ex_leg_extension",
+      "name": "Leg Extension",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [],
+      "targetZone": "quads",
+      "mechanics": "isolation",
+      "equipment": [
+        "machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_lying_leg_curl",
+      "name": "Lying Leg Curl",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [],
+      "targetZone": "hamstrings",
+      "mechanics": "isolation",
+      "equipment": [
+        "machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "hinge_pattern"
+    },
+    {
+      "id": "ex_hip_thrust",
+      "name": "Barbell Hip Thrust",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "glutes",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "hinge_pattern"
+    },
+    {
+      "id": "ex_standing_calf_raise",
+      "name": "Standing Calf Raise",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [],
+      "targetZone": "calves",
+      "mechanics": "isolation",
+      "equipment": [
+        "machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "ankle_plantarflexion"
+    },
+    {
+      "id": "ex_bulgarian_split_squat",
+      "name": "Bulgarian Split Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "lunge_pattern"
+    },
+    {
+      "id": "ex_goblet_squat",
+      "name": "Goblet Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "kettlebell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_barbell_ohp",
+      "name": "Barbell Overhead Press",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [
+        "arms",
+        "core"
+      ],
+      "targetZone": "front_delts",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "vertical_push"
+    },
+    {
+      "id": "ex_dumbbell_shoulder_press",
+      "name": "Dumbbell Shoulder Press",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "front_delts",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "vertical_push"
+    },
+    {
+      "id": "ex_lateral_raise",
+      "name": "Dumbbell Lateral Raise",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [],
+      "targetZone": "side_delts",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_raise"
+    },
+    {
+      "id": "ex_front_raise",
+      "name": "Dumbbell Front Raise",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [],
+      "targetZone": "front_delts",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_raise"
+    },
+    {
+      "id": "ex_rear_delt_fly",
+      "name": "Rear Delt Fly",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [
+        "back"
+      ],
+      "targetZone": "rear_delts",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_raise"
+    },
+    {
+      "id": "ex_arnold_press",
+      "name": "Arnold Press",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "front_delts",
+      "mechanics": "compound",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "vertical_push"
+    },
+    {
+      "id": "ex_cable_lateral_raise",
+      "name": "Cable Lateral Raise",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [],
+      "targetZone": "side_delts",
+      "mechanics": "isolation",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "horizontal_raise"
+    },
+    {
+      "id": "ex_barbell_curl",
+      "name": "Barbell Curl",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "biceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "curl"
+    },
+    {
+      "id": "ex_dumbbell_curl",
+      "name": "Dumbbell Curl",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "biceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "curl"
+    },
+    {
+      "id": "ex_hammer_curl",
+      "name": "Hammer Curl",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "biceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "curl"
+    },
+    {
+      "id": "ex_tricep_pushdown",
+      "name": "Tricep Pushdown",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "triceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "extension"
+    },
+    {
+      "id": "ex_skull_crusher",
+      "name": "EZ Bar Skull Crusher",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "triceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "ez_bar"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "extension"
+    },
+    {
+      "id": "ex_close_grip_bench",
+      "name": "Close-Grip Bench Press",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [
+        "chest"
+      ],
+      "targetZone": "triceps",
+      "mechanics": "compound",
+      "equipment": [
+        "barbell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "horizontal_push"
+    },
+    {
+      "id": "ex_preacher_curl",
+      "name": "Preacher Curl",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "biceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "ez_bar"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "curl"
+    },
+    {
+      "id": "ex_overhead_tricep_extension",
+      "name": "Overhead Tricep Extension",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "triceps",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "extension"
+    },
+    {
+      "id": "ex_wrist_curl",
+      "name": "Wrist Curl",
+      "primaryMuscle": "arms",
+      "secondaryMuscles": [],
+      "targetZone": "forearms",
+      "mechanics": "isolation",
+      "equipment": [
+        "dumbbell"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "wrist_curl"
+    },
+    {
+      "id": "ex_plank",
+      "name": "Plank",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "deep_core",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "anti_extension"
+    },
+    {
+      "id": "ex_crunch",
+      "name": "Crunch",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [],
+      "targetZone": "upper_abs",
+      "mechanics": "isolation",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "crunch"
+    },
+    {
+      "id": "ex_hanging_leg_raise",
+      "name": "Hanging Leg Raise",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [],
+      "targetZone": "lower_abs",
+      "mechanics": "isolation",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "leg_raise"
+    },
+    {
+      "id": "ex_russian_twist",
+      "name": "Russian Twist",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [],
+      "targetZone": "obliques",
+      "mechanics": "isolation",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "rotation"
+    },
+    {
+      "id": "ex_cable_woodchop",
+      "name": "Cable Woodchop",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "obliques",
+      "mechanics": "compound",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "anti_rotation"
+    },
+    {
+      "id": "ex_ab_wheel_rollout",
+      "name": "Ab Wheel Rollout",
+      "primaryMuscle": "core",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "deep_core",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "advanced",
+      "movementPattern": "anti_extension"
+    },
+    {
+      "id": "ex_smith_machine_squat",
+      "name": "Smith Machine Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "smith_machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_cable_row_single_arm",
+      "name": "Single-Arm Cable Row",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "lats",
+      "mechanics": "compound",
+      "equipment": [
+        "cable"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_pull"
+    },
+    {
+      "id": "ex_kettlebell_swing",
+      "name": "Kettlebell Swing",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "back",
+        "core"
+      ],
+      "targetZone": "glutes",
+      "mechanics": "compound",
+      "equipment": [
+        "kettlebell"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "hinge_pattern"
+    },
+    {
+      "id": "ex_band_pull_apart",
+      "name": "Band Pull-Apart",
+      "primaryMuscle": "shoulders",
+      "secondaryMuscles": [
+        "back"
+      ],
+      "targetZone": "rear_delts",
+      "mechanics": "isolation",
+      "equipment": [
+        "resistance_band"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "horizontal_raise"
+    },
+    {
+      "id": "ex_band_squat",
+      "name": "Banded Squat",
+      "primaryMuscle": "legs",
+      "secondaryMuscles": [
+        "core"
+      ],
+      "targetZone": "quads",
+      "mechanics": "compound",
+      "equipment": [
+        "resistance_band"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "squat_pattern"
+    },
+    {
+      "id": "ex_incline_smith_press",
+      "name": "Incline Smith Machine Press",
+      "primaryMuscle": "chest",
+      "secondaryMuscles": [
+        "shoulders"
+      ],
+      "targetZone": "upper_chest",
+      "mechanics": "compound",
+      "equipment": [
+        "smith_machine"
+      ],
+      "difficulty": "beginner",
+      "movementPattern": "incline_push"
+    },
+    {
+      "id": "ex_chin_up",
+      "name": "Chin-Up",
+      "primaryMuscle": "back",
+      "secondaryMuscles": [
+        "arms"
+      ],
+      "targetZone": "lats",
+      "mechanics": "compound",
+      "equipment": [
+        "bodyweight"
+      ],
+      "difficulty": "intermediate",
+      "movementPattern": "vertical_pull"
+    }
+  ]
+}

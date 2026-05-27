@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "Exercise",
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "primaryMuscle",
+    "secondaryMuscles",
+    "targetZone",
+    "mechanics",
+    "equipment",
+    "difficulty",
+    "movementPattern"
+  ],
+  "properties": {
+    "id": { "type": "string", "pattern": "^ex_[a-z0-9_]+$" },
+    "name": { "type": "string", "minLength": 2 },
+    "primaryMuscle": { "$ref": "#/$defs/MuscleGroup" },
+    "secondaryMuscles": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/MuscleGroup" },
+      "maxItems": 3
+    },
+    "targetZone": { "$ref": "#/$defs/TargetZone" },
+    "mechanics": { "enum": ["compound", "isolation"] },
+    "equipment": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Equipment" },
+      "minItems": 1
+    },
+    "difficulty": { "enum": ["beginner", "intermediate", "advanced"] },
+    "movementPattern": { "type": "string" },
+    "instructions": { "type": "string" },
+    "videoUrl": { "type": "string", "format": "uri" }
+  },
+  "$defs": {
+    "MuscleGroup": {
+      "enum": ["chest", "back", "legs", "shoulders", "arms", "core"]
+    },
+    "TargetZone": {
+      "enum": [
+        "upper_chest", "mid_chest", "lower_chest",
+        "lats", "upper_back", "lower_back", "traps",
+        "quads", "hamstrings", "glutes", "calves",
+        "front_delts", "side_delts", "rear_delts",
+        "biceps", "triceps", "forearms",
+        "upper_abs", "lower_abs", "obliques", "deep_core"
+      ]
+    },
+    "Equipment": {
+      "enum": [
+        "barbell", "dumbbell", "cable", "machine",
+        "bodyweight", "kettlebell", "resistance_band",
+        "smith_machine", "ez_bar"
+      ]
+    }
+  }
+}
