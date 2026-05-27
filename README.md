@@ -1,6 +1,14 @@
-# Mobile Fitness App
+# Mobile Fitness App (FitForge)
 
-Personalized workout generation by body type, goal, and equipment.
+Personalized workout generation by body type, goal, and equipment. **Flutter** app in `mobile/`.
+
+## Run the app
+
+```bash
+cd mobile
+flutter pub get
+flutter run
+```
 
 ## Seed data (Stage 2)
 

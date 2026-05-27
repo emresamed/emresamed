@@ -4,7 +4,7 @@ Approved blueprint for the multi-agent pipeline. Application source code lives i
 
 ## Stack Defaults (post-approval)
 
-- **Runtime:** React Native + TypeScript (Stage 3–4)
+- **Runtime:** Flutter + Dart (`mobile/`)
 - **Goals:** `strength`, `hypertrophy`, `fat_loss`, `endurance`
 - **Split selection:** Auto from `daysPerWeek` with optional user override
 
@@ -38,6 +38,6 @@ Canonical schemas: `Exercise`, `UserProfile`, `WorkoutSessionTemplate`, `Prescri
 |-------|-------|--------|
 | 1 | Architect | Done |
 | 2 | Data Engineer | Done (seed files) |
-| 3 | Core Developer | Blocked until explicit code approval |
-| 4 | UI Engineer | Blocked until explicit code approval |
-| 5 | QA | Pending 3–4 |
+| 3 | Core Developer | Done (`mobile/lib/domain`, `mobile/lib/state`) |
+| 4 | UI Engineer | Done (`mobile/lib/ui`) |
+| 5 | QA | Partial (generator unit tests) |
