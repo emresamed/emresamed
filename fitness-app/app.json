@@ -23,8 +23,11 @@
       },
       "package": "com.fitforge.app"
     },
-    "plugins": [
-      "react-native-reanimated"
-    ]
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": []
   }
 }
