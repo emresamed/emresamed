@@ -1,0 +1,31 @@
+{
+  "name": "mobile-fitness-core",
+  "version": "1.0.0",
+  "description": "Type-safe onboarding, workout generation, and dark-mode UI for the mobile fitness app",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "typecheck:ui": "tsc --noEmit -p ui/tsconfig.json",
+    "test": "npm run typecheck && npm run typecheck:ui"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emresamed/emresamed.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emresamed/emresamed/issues"
+  },
+  "homepage": "https://github.com/emresamed/emresamed#readme",
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^6.0.3"
+  }
+}

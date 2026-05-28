@@ -1,0 +1,478 @@
+{
+  "schemaVersion": "1.0.0",
+  "muscleGroups": [
+    { "id": "chest", "name": "Chest", "sortOrder": 1 },
+    { "id": "back", "name": "Back", "sortOrder": 2 },
+    { "id": "legs", "name": "Legs", "sortOrder": 3 },
+    { "id": "shoulders", "name": "Shoulders", "sortOrder": 4 },
+    { "id": "arms", "name": "Arms", "sortOrder": 5 },
+    { "id": "core", "name": "Core", "sortOrder": 6 }
+  ],
+  "targetZones": [
+    { "id": "upper_chest", "muscleGroupId": "chest", "name": "Upper Chest" },
+    { "id": "mid_chest", "muscleGroupId": "chest", "name": "Mid Chest" },
+    { "id": "lower_chest", "muscleGroupId": "chest", "name": "Lower Chest" },
+    { "id": "inner_chest", "muscleGroupId": "chest", "name": "Inner Chest" },
+    { "id": "lats", "muscleGroupId": "back", "name": "Lats" },
+    { "id": "mid_back", "muscleGroupId": "back", "name": "Mid Back" },
+    { "id": "upper_back", "muscleGroupId": "back", "name": "Upper Back" },
+    { "id": "lower_back", "muscleGroupId": "back", "name": "Lower Back" },
+    { "id": "traps", "muscleGroupId": "back", "name": "Traps" },
+    { "id": "quads", "muscleGroupId": "legs", "name": "Quads" },
+    { "id": "hamstrings", "muscleGroupId": "legs", "name": "Hamstrings" },
+    { "id": "glutes", "muscleGroupId": "legs", "name": "Glutes" },
+    { "id": "calves", "muscleGroupId": "legs", "name": "Calves" },
+    { "id": "adductors", "muscleGroupId": "legs", "name": "Adductors" },
+    { "id": "front_delts", "muscleGroupId": "shoulders", "name": "Front Delts" },
+    { "id": "side_delts", "muscleGroupId": "shoulders", "name": "Side Delts" },
+    { "id": "rear_delts", "muscleGroupId": "shoulders", "name": "Rear Delts" },
+    { "id": "rotator_cuff", "muscleGroupId": "shoulders", "name": "Rotator Cuff" },
+    { "id": "biceps", "muscleGroupId": "arms", "name": "Biceps" },
+    { "id": "brachialis", "muscleGroupId": "arms", "name": "Brachialis" },
+    { "id": "triceps_long_head", "muscleGroupId": "arms", "name": "Triceps Long Head" },
+    { "id": "triceps_lateral_medial", "muscleGroupId": "arms", "name": "Triceps Lateral and Medial Heads" },
+    { "id": "forearms", "muscleGroupId": "arms", "name": "Forearms" },
+    { "id": "rectus_abdominis", "muscleGroupId": "core", "name": "Rectus Abdominis" },
+    { "id": "obliques", "muscleGroupId": "core", "name": "Obliques" },
+    { "id": "transverse_abdominis", "muscleGroupId": "core", "name": "Transverse Abdominis" },
+    { "id": "erectors", "muscleGroupId": "core", "name": "Erectors" }
+  ],
+  "equipment": [
+    { "id": "barbell", "name": "Barbell", "category": "free_weight" },
+    { "id": "ez_bar", "name": "EZ Bar", "category": "free_weight" },
+    { "id": "dumbbell", "name": "Dumbbell", "category": "free_weight" },
+    { "id": "kettlebell", "name": "Kettlebell", "category": "free_weight" },
+    { "id": "bench", "name": "Flat Bench", "category": "accessory" },
+    { "id": "adjustable_bench", "name": "Adjustable Bench", "category": "accessory" },
+    { "id": "preacher_bench", "name": "Preacher Bench", "category": "accessory" },
+    { "id": "squat_rack", "name": "Squat Rack", "category": "rack" },
+    { "id": "smith_machine", "name": "Smith Machine", "category": "machine" },
+    { "id": "cable_machine", "name": "Cable Machine", "category": "cable" },
+    { "id": "pull_up_bar", "name": "Pull-Up Bar", "category": "bodyweight" },
+    { "id": "dip_station", "name": "Dip Station", "category": "bodyweight" },
+    { "id": "lat_pulldown_machine", "name": "Lat Pulldown Machine", "category": "machine" },
+    { "id": "chest_supported_row_machine", "name": "Chest-Supported Row Machine", "category": "machine" },
+    { "id": "pec_deck", "name": "Pec Deck", "category": "machine" },
+    { "id": "chest_press_machine", "name": "Chest Press Machine", "category": "machine" },
+    { "id": "leg_press_machine", "name": "Leg Press Machine", "category": "machine" },
+    { "id": "leg_extension_machine", "name": "Leg Extension Machine", "category": "machine" },
+    { "id": "leg_curl_machine", "name": "Leg Curl Machine", "category": "machine" },
+    { "id": "calf_raise_machine", "name": "Calf Raise Machine", "category": "machine" },
+    { "id": "shoulder_press_machine", "name": "Shoulder Press Machine", "category": "machine" },
+    { "id": "reverse_pec_deck", "name": "Reverse Pec Deck", "category": "machine" },
+    { "id": "resistance_band", "name": "Resistance Band", "category": "accessory" },
+    { "id": "medicine_ball", "name": "Medicine Ball", "category": "accessory" },
+    { "id": "ab_wheel", "name": "Ab Wheel", "category": "accessory" },
+    { "id": "roman_chair", "name": "Roman Chair", "category": "machine" },
+    { "id": "bodyweight", "name": "Bodyweight", "category": "bodyweight" }
+  ],
+  "movementTypes": [
+    { "id": "horizontal_push", "name": "Horizontal Push", "plane": "horizontal", "pattern": "push" },
+    { "id": "incline_push", "name": "Incline Push", "plane": "mixed", "pattern": "push" },
+    { "id": "decline_push", "name": "Decline Push", "plane": "mixed", "pattern": "push" },
+    { "id": "fly", "name": "Fly", "plane": "horizontal", "pattern": "push" },
+    { "id": "vertical_pull", "name": "Vertical Pull", "plane": "vertical", "pattern": "pull" },
+    { "id": "horizontal_pull", "name": "Horizontal Pull", "plane": "horizontal", "pattern": "pull" },
+    { "id": "scapular_retraction", "name": "Scapular Retraction", "plane": "horizontal", "pattern": "pull" },
+    { "id": "hip_hinge", "name": "Hip Hinge", "plane": "sagittal", "pattern": "hinge" },
+    { "id": "squat", "name": "Squat", "plane": "sagittal", "pattern": "squat" },
+    { "id": "lunge", "name": "Lunge", "plane": "sagittal", "pattern": "lunge" },
+    { "id": "leg_extension", "name": "Leg Extension", "plane": "sagittal", "pattern": "knee_extension" },
+    { "id": "leg_curl", "name": "Leg Curl", "plane": "sagittal", "pattern": "knee_flexion" },
+    { "id": "calf_raise", "name": "Calf Raise", "plane": "sagittal", "pattern": "plantar_flexion" },
+    { "id": "vertical_push", "name": "Vertical Push", "plane": "vertical", "pattern": "push" },
+    { "id": "lateral_raise", "name": "Lateral Raise", "plane": "frontal", "pattern": "abduction" },
+    { "id": "rear_delt_raise", "name": "Rear Delt Raise", "plane": "transverse", "pattern": "horizontal_abduction" },
+    { "id": "external_rotation", "name": "External Rotation", "plane": "transverse", "pattern": "rotation" },
+    { "id": "elbow_flexion", "name": "Elbow Flexion", "plane": "sagittal", "pattern": "curl" },
+    { "id": "elbow_extension", "name": "Elbow Extension", "plane": "sagittal", "pattern": "extension" },
+    { "id": "wrist_flexion_extension", "name": "Wrist Flexion and Extension", "plane": "sagittal", "pattern": "forearm" },
+    { "id": "anti_extension", "name": "Anti-Extension", "plane": "sagittal", "pattern": "anti_extension" },
+    { "id": "anti_rotation", "name": "Anti-Rotation", "plane": "transverse", "pattern": "anti_rotation" },
+    { "id": "rotation", "name": "Rotation", "plane": "transverse", "pattern": "rotation" },
+    { "id": "flexion", "name": "Flexion", "plane": "sagittal", "pattern": "flexion" },
+    { "id": "carry", "name": "Carry", "plane": "mixed", "pattern": "carry" }
+  ],
+  "exercises": [
+    { "id": "barbell-bench-press", "name": "Barbell Bench Press", "primaryMuscle": "chest", "primaryTargetZone": "mid_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "horizontal_push", "equipment": ["barbell", "bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "dumbbell-bench-press", "name": "Dumbbell Bench Press", "primaryMuscle": "chest", "primaryTargetZone": "mid_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "horizontal_push", "equipment": ["dumbbell", "bench"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "incline-dumbbell-press", "name": "Incline Dumbbell Press", "primaryMuscle": "chest", "primaryTargetZone": "upper_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "incline_push", "equipment": ["dumbbell", "adjustable_bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "incline-barbell-bench-press", "name": "Incline Barbell Bench Press", "primaryMuscle": "chest", "primaryTargetZone": "upper_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "incline_push", "equipment": ["barbell", "adjustable_bench", "squat_rack"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "decline-barbell-bench-press", "name": "Decline Barbell Bench Press", "primaryMuscle": "chest", "primaryTargetZone": "lower_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "decline_push", "equipment": ["barbell", "bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "cable-chest-fly", "name": "Cable Chest Fly", "primaryMuscle": "chest", "primaryTargetZone": "inner_chest", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "fly", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "pec-deck-fly", "name": "Pec Deck Fly", "primaryMuscle": "chest", "primaryTargetZone": "inner_chest", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "fly", "equipment": ["pec_deck"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "push-up", "name": "Push-Up", "primaryMuscle": "chest", "primaryTargetZone": "mid_chest", "secondaryMuscles": ["shoulders", "arms", "core"], "mechanics": "compound", "movementType": "horizontal_push", "equipment": ["bodyweight"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "chest-dip", "name": "Chest Dip", "primaryMuscle": "chest", "primaryTargetZone": "lower_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "decline_push", "equipment": ["dip_station"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "machine-chest-press", "name": "Machine Chest Press", "primaryMuscle": "chest", "primaryTargetZone": "mid_chest", "secondaryMuscles": ["shoulders", "arms"], "mechanics": "compound", "movementType": "horizontal_push", "equipment": ["chest_press_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "pull-up", "name": "Pull-Up", "primaryMuscle": "back", "primaryTargetZone": "lats", "secondaryMuscles": ["arms", "shoulders"], "mechanics": "compound", "movementType": "vertical_pull", "equipment": ["pull_up_bar"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["elbow_irritation"] },
+    { "id": "lat-pulldown", "name": "Lat Pulldown", "primaryMuscle": "back", "primaryTargetZone": "lats", "secondaryMuscles": ["arms", "shoulders"], "mechanics": "compound", "movementType": "vertical_pull", "equipment": ["lat_pulldown_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "barbell-bent-over-row", "name": "Barbell Bent-Over Row", "primaryMuscle": "back", "primaryTargetZone": "mid_back", "secondaryMuscles": ["arms", "core", "legs"], "mechanics": "compound", "movementType": "horizontal_pull", "equipment": ["barbell"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["low_back_irritation"] },
+    { "id": "one-arm-dumbbell-row", "name": "One-Arm Dumbbell Row", "primaryMuscle": "back", "primaryTargetZone": "lats", "secondaryMuscles": ["arms", "core"], "mechanics": "compound", "movementType": "horizontal_pull", "equipment": ["dumbbell", "bench"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "seated-cable-row", "name": "Seated Cable Row", "primaryMuscle": "back", "primaryTargetZone": "mid_back", "secondaryMuscles": ["arms", "shoulders"], "mechanics": "compound", "movementType": "horizontal_pull", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "chest-supported-machine-row", "name": "Chest-Supported Machine Row", "primaryMuscle": "back", "primaryTargetZone": "mid_back", "secondaryMuscles": ["arms", "shoulders"], "mechanics": "compound", "movementType": "horizontal_pull", "equipment": ["chest_supported_row_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "cable-face-pull", "name": "Cable Face Pull", "primaryMuscle": "back", "primaryTargetZone": "upper_back", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "scapular_retraction", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "barbell-deadlift", "name": "Barbell Deadlift", "primaryMuscle": "back", "primaryTargetZone": "lower_back", "secondaryMuscles": ["legs", "core", "arms"], "mechanics": "compound", "movementType": "hip_hinge", "equipment": ["barbell"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["low_back_irritation"] },
+    { "id": "roman-chair-back-extension", "name": "Roman Chair Back Extension", "primaryMuscle": "back", "primaryTargetZone": "lower_back", "secondaryMuscles": ["legs", "core"], "mechanics": "compound", "movementType": "hip_hinge", "equipment": ["roman_chair"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "straight-arm-pulldown", "name": "Straight-Arm Pulldown", "primaryMuscle": "back", "primaryTargetZone": "lats", "secondaryMuscles": ["shoulders", "core"], "mechanics": "isolation", "movementType": "vertical_pull", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "back-squat", "name": "Back Squat", "primaryMuscle": "legs", "primaryTargetZone": "quads", "secondaryMuscles": ["core", "back"], "mechanics": "compound", "movementType": "squat", "equipment": ["barbell", "squat_rack"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["knee_irritation", "low_back_irritation"] },
+    { "id": "front-squat", "name": "Front Squat", "primaryMuscle": "legs", "primaryTargetZone": "quads", "secondaryMuscles": ["core", "back"], "mechanics": "compound", "movementType": "squat", "equipment": ["barbell", "squat_rack"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["wrist_irritation"] },
+    { "id": "leg-press", "name": "Leg Press", "primaryMuscle": "legs", "primaryTargetZone": "quads", "secondaryMuscles": [], "mechanics": "compound", "movementType": "squat", "equipment": ["leg_press_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "romanian-deadlift", "name": "Romanian Deadlift", "primaryMuscle": "legs", "primaryTargetZone": "hamstrings", "secondaryMuscles": ["back", "core"], "mechanics": "compound", "movementType": "hip_hinge", "equipment": ["barbell"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["low_back_irritation"] },
+    { "id": "dumbbell-walking-lunge", "name": "Dumbbell Walking Lunge", "primaryMuscle": "legs", "primaryTargetZone": "glutes", "secondaryMuscles": ["core"], "mechanics": "compound", "movementType": "lunge", "equipment": ["dumbbell"], "difficulty": "intermediate", "unilateral": true, "contraindicationTags": ["knee_irritation"] },
+    { "id": "bulgarian-split-squat", "name": "Bulgarian Split Squat", "primaryMuscle": "legs", "primaryTargetZone": "glutes", "secondaryMuscles": ["core"], "mechanics": "compound", "movementType": "lunge", "equipment": ["dumbbell", "bench"], "difficulty": "advanced", "unilateral": true, "contraindicationTags": ["knee_irritation"] },
+    { "id": "leg-extension", "name": "Leg Extension", "primaryMuscle": "legs", "primaryTargetZone": "quads", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "leg_extension", "equipment": ["leg_extension_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": ["knee_irritation"] },
+    { "id": "lying-leg-curl", "name": "Lying Leg Curl", "primaryMuscle": "legs", "primaryTargetZone": "hamstrings", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "leg_curl", "equipment": ["leg_curl_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "standing-calf-raise", "name": "Standing Calf Raise", "primaryMuscle": "legs", "primaryTargetZone": "calves", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "calf_raise", "equipment": ["calf_raise_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "barbell-hip-thrust", "name": "Barbell Hip Thrust", "primaryMuscle": "legs", "primaryTargetZone": "glutes", "secondaryMuscles": ["core"], "mechanics": "compound", "movementType": "hip_hinge", "equipment": ["barbell", "bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "barbell-overhead-press", "name": "Barbell Overhead Press", "primaryMuscle": "shoulders", "primaryTargetZone": "front_delts", "secondaryMuscles": ["arms", "core"], "mechanics": "compound", "movementType": "vertical_push", "equipment": ["barbell"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "dumbbell-shoulder-press", "name": "Dumbbell Shoulder Press", "primaryMuscle": "shoulders", "primaryTargetZone": "front_delts", "secondaryMuscles": ["arms", "core"], "mechanics": "compound", "movementType": "vertical_push", "equipment": ["dumbbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "machine-shoulder-press", "name": "Machine Shoulder Press", "primaryMuscle": "shoulders", "primaryTargetZone": "front_delts", "secondaryMuscles": ["arms"], "mechanics": "compound", "movementType": "vertical_push", "equipment": ["shoulder_press_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "dumbbell-lateral-raise", "name": "Dumbbell Lateral Raise", "primaryMuscle": "shoulders", "primaryTargetZone": "side_delts", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "lateral_raise", "equipment": ["dumbbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "cable-lateral-raise", "name": "Cable Lateral Raise", "primaryMuscle": "shoulders", "primaryTargetZone": "side_delts", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "lateral_raise", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "reverse-pec-deck-fly", "name": "Reverse Pec Deck Fly", "primaryMuscle": "shoulders", "primaryTargetZone": "rear_delts", "secondaryMuscles": ["back"], "mechanics": "isolation", "movementType": "rear_delt_raise", "equipment": ["reverse_pec_deck"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "bent-over-rear-delt-raise", "name": "Bent-Over Rear Delt Raise", "primaryMuscle": "shoulders", "primaryTargetZone": "rear_delts", "secondaryMuscles": ["back"], "mechanics": "isolation", "movementType": "rear_delt_raise", "equipment": ["dumbbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "band-external-rotation", "name": "Band External Rotation", "primaryMuscle": "shoulders", "primaryTargetZone": "rotator_cuff", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "external_rotation", "equipment": ["resistance_band"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "arnold-press", "name": "Arnold Press", "primaryMuscle": "shoulders", "primaryTargetZone": "front_delts", "secondaryMuscles": ["arms"], "mechanics": "compound", "movementType": "vertical_push", "equipment": ["dumbbell"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "barbell-upright-row", "name": "Barbell Upright Row", "primaryMuscle": "shoulders", "primaryTargetZone": "side_delts", "secondaryMuscles": ["back", "arms"], "mechanics": "compound", "movementType": "scapular_retraction", "equipment": ["barbell"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_impingement"] },
+    { "id": "barbell-curl", "name": "Barbell Curl", "primaryMuscle": "arms", "primaryTargetZone": "biceps", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_flexion", "equipment": ["barbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "dumbbell-hammer-curl", "name": "Dumbbell Hammer Curl", "primaryMuscle": "arms", "primaryTargetZone": "brachialis", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_flexion", "equipment": ["dumbbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "incline-dumbbell-curl", "name": "Incline Dumbbell Curl", "primaryMuscle": "arms", "primaryTargetZone": "biceps", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_flexion", "equipment": ["dumbbell", "adjustable_bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "cable-curl", "name": "Cable Curl", "primaryMuscle": "arms", "primaryTargetZone": "biceps", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_flexion", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "preacher-curl", "name": "Preacher Curl", "primaryMuscle": "arms", "primaryTargetZone": "biceps", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_flexion", "equipment": ["ez_bar", "preacher_bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "triceps-rope-pushdown", "name": "Triceps Rope Pushdown", "primaryMuscle": "arms", "primaryTargetZone": "triceps_lateral_medial", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_extension", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "ez-bar-skullcrusher", "name": "EZ-Bar Skullcrusher", "primaryMuscle": "arms", "primaryTargetZone": "triceps_long_head", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_extension", "equipment": ["ez_bar", "bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["elbow_irritation"] },
+    { "id": "close-grip-bench-press", "name": "Close-Grip Bench Press", "primaryMuscle": "arms", "primaryTargetZone": "triceps_lateral_medial", "secondaryMuscles": ["chest", "shoulders"], "mechanics": "compound", "movementType": "horizontal_push", "equipment": ["barbell", "bench"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": ["shoulder_irritation"] },
+    { "id": "overhead-cable-triceps-extension", "name": "Overhead Cable Triceps Extension", "primaryMuscle": "arms", "primaryTargetZone": "triceps_long_head", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "elbow_extension", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "dumbbell-wrist-curl", "name": "Dumbbell Wrist Curl", "primaryMuscle": "arms", "primaryTargetZone": "forearms", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "wrist_flexion_extension", "equipment": ["dumbbell", "bench"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "plank", "name": "Plank", "primaryMuscle": "core", "primaryTargetZone": "transverse_abdominis", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "anti_extension", "equipment": ["bodyweight"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "side-plank", "name": "Side Plank", "primaryMuscle": "core", "primaryTargetZone": "obliques", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "anti_rotation", "equipment": ["bodyweight"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "dead-bug", "name": "Dead Bug", "primaryMuscle": "core", "primaryTargetZone": "transverse_abdominis", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "anti_extension", "equipment": ["bodyweight"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "hanging-knee-raise", "name": "Hanging Knee Raise", "primaryMuscle": "core", "primaryTargetZone": "rectus_abdominis", "secondaryMuscles": ["arms"], "mechanics": "compound", "movementType": "flexion", "equipment": ["pull_up_bar"], "difficulty": "intermediate", "unilateral": false, "contraindicationTags": [] },
+    { "id": "cable-woodchop", "name": "Cable Woodchop", "primaryMuscle": "core", "primaryTargetZone": "obliques", "secondaryMuscles": ["shoulders"], "mechanics": "compound", "movementType": "rotation", "equipment": ["cable_machine"], "difficulty": "intermediate", "unilateral": true, "contraindicationTags": [] },
+    { "id": "pallof-press", "name": "Pallof Press", "primaryMuscle": "core", "primaryTargetZone": "obliques", "secondaryMuscles": ["shoulders"], "mechanics": "isolation", "movementType": "anti_rotation", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": true, "contraindicationTags": [] },
+    { "id": "ab-wheel-rollout", "name": "Ab Wheel Rollout", "primaryMuscle": "core", "primaryTargetZone": "rectus_abdominis", "secondaryMuscles": ["shoulders", "back"], "mechanics": "compound", "movementType": "anti_extension", "equipment": ["ab_wheel"], "difficulty": "advanced", "unilateral": false, "contraindicationTags": ["low_back_irritation"] },
+    { "id": "weighted-cable-crunch", "name": "Weighted Cable Crunch", "primaryMuscle": "core", "primaryTargetZone": "rectus_abdominis", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "flexion", "equipment": ["cable_machine"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "farmers-carry", "name": "Farmers Carry", "primaryMuscle": "core", "primaryTargetZone": "transverse_abdominis", "secondaryMuscles": ["arms", "back", "legs"], "mechanics": "compound", "movementType": "carry", "equipment": ["dumbbell"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] },
+    { "id": "medicine-ball-russian-twist", "name": "Medicine Ball Russian Twist", "primaryMuscle": "core", "primaryTargetZone": "obliques", "secondaryMuscles": [], "mechanics": "isolation", "movementType": "rotation", "equipment": ["medicine_ball"], "difficulty": "beginner", "unilateral": false, "contraindicationTags": [] }
+  ],
+  "weeklySplitTemplates": [
+    {
+      "id": "ppl-ectomorph",
+      "name": "Ectomorph Push Pull Legs",
+      "splitType": "push_pull_legs",
+      "bodyType": "ectomorph",
+      "daysPerWeek": 3,
+      "trainingDays": [
+        {
+          "dayIndex": 1,
+          "name": "Push Quality",
+          "focus": ["chest", "shoulders", "arms"],
+          "exerciseSlots": [
+            { "slotId": "main-horizontal-press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 5, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press", "machine-chest-press"] },
+            { "slotId": "incline-press", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["incline-dumbbell-press", "incline-barbell-bench-press"] },
+            { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["dumbbell-shoulder-press", "machine-shoulder-press", "barbell-overhead-press"] },
+            { "slotId": "triceps-isolation", "primaryMuscle": "arms", "targetZones": ["triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["triceps-rope-pushdown", "overhead-cable-triceps-extension"] }
+          ]
+        },
+        {
+          "dayIndex": 2,
+          "name": "Pull Quality",
+          "focus": ["back", "arms"],
+          "exerciseSlots": [
+            { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+            { "slotId": "horizontal-row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bent-over-row", "one-arm-dumbbell-row", "seated-cable-row"] },
+            { "slotId": "rear-delt", "primaryMuscle": "shoulders", "targetZones": ["rear_delts"], "mechanics": "isolation", "movementType": "rear_delt_raise", "sets": { "min": 2, "max": 3 }, "reps": { "min": 12, "max": 18 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["reverse-pec-deck-fly", "bent-over-rear-delt-raise"] },
+            { "slotId": "biceps-isolation", "primaryMuscle": "arms", "targetZones": ["biceps", "brachialis"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["barbell-curl", "dumbbell-hammer-curl", "cable-curl"] }
+          ]
+        },
+        {
+          "dayIndex": 3,
+          "name": "Legs Quality",
+          "focus": ["legs", "core"],
+          "exerciseSlots": [
+            { "slotId": "squat-pattern", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 3, "max": 4 }, "reps": { "min": 5, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat", "leg-press"] },
+            { "slotId": "hinge-pattern", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+            { "slotId": "calves", "primaryMuscle": "legs", "targetZones": ["calves"], "mechanics": "isolation", "movementType": "calf_raise", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["standing-calf-raise"] },
+            { "slotId": "anti-extension-core", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "isolation", "movementType": "anti_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 6, "max": 8 }, "restSeconds": { "min": 60, "max": 90 }, "candidateExerciseIds": ["plank", "dead-bug", "ab-wheel-rollout"] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ppl-mesomorph",
+      "name": "Mesomorph Push Pull Legs",
+      "splitType": "push_pull_legs",
+      "bodyType": "mesomorph",
+      "daysPerWeek": 6,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Push A Strength Bias", "focus": ["chest", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "main-horizontal-press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 240 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 5, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["barbell-overhead-press", "dumbbell-shoulder-press"] },
+          { "slotId": "fly", "primaryMuscle": "chest", "targetZones": ["inner_chest"], "mechanics": "isolation", "movementType": "fly", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["cable-chest-fly", "pec-deck-fly"] },
+          { "slotId": "triceps", "primaryMuscle": "arms", "targetZones": ["triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_extension", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["triceps-rope-pushdown", "ez-bar-skullcrusher"] }
+        ] },
+        { "dayIndex": 2, "name": "Pull A Strength Bias", "focus": ["back", "arms"], "exerciseSlots": [
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 5, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bent-over-row", "chest-supported-machine-row"] },
+          { "slotId": "lat-isolation", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "isolation", "movementType": "vertical_pull", "sets": { "min": 2, "max": 3 }, "reps": { "min": 12, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["straight-arm-pulldown"] },
+          { "slotId": "biceps", "primaryMuscle": "arms", "targetZones": ["biceps", "brachialis"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["barbell-curl", "incline-dumbbell-curl", "dumbbell-hammer-curl"] }
+        ] },
+        { "dayIndex": 3, "name": "Legs A Strength Bias", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat"] },
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "leg-accessory", "primaryMuscle": "legs", "targetZones": ["quads", "hamstrings"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["leg-extension", "lying-leg-curl"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["rectus_abdominis", "obliques"], "mechanics": "compound", "movementType": "flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["hanging-knee-raise", "weighted-cable-crunch", "pallof-press"] }
+        ] },
+        { "dayIndex": 4, "name": "Push B Hypertrophy Bias", "focus": ["chest", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "incline-press", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["incline-dumbbell-press", "incline-barbell-bench-press"] },
+          { "slotId": "machine-press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["machine-chest-press", "push-up"] },
+          { "slotId": "side-delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["dumbbell-lateral-raise", "cable-lateral-raise"] },
+          { "slotId": "overhead-triceps", "primaryMuscle": "arms", "targetZones": ["triceps_long_head"], "mechanics": "isolation", "movementType": "elbow_extension", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["overhead-cable-triceps-extension", "ez-bar-skullcrusher"] }
+        ] },
+        { "dayIndex": 5, "name": "Pull B Hypertrophy Bias", "focus": ["back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "supported-row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["seated-cable-row", "chest-supported-machine-row", "one-arm-dumbbell-row"] },
+          { "slotId": "rear-delts", "primaryMuscle": "shoulders", "targetZones": ["rear_delts"], "mechanics": "isolation", "movementType": "rear_delt_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["reverse-pec-deck-fly", "bent-over-rear-delt-raise"] },
+          { "slotId": "upper-back", "primaryMuscle": "back", "targetZones": ["upper_back"], "mechanics": "isolation", "movementType": "scapular_retraction", "sets": { "min": 2, "max": 4 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["cable-face-pull"] },
+          { "slotId": "curl", "primaryMuscle": "arms", "targetZones": ["biceps"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["cable-curl", "preacher-curl"] }
+        ] },
+        { "dayIndex": 6, "name": "Legs B Hypertrophy Bias", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "leg-press", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["leg-press", "front-squat"] },
+          { "slotId": "single-leg", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "hamstring-curl", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "isolation", "movementType": "leg_curl", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["lying-leg-curl"] },
+          { "slotId": "loaded-carry", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 4 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["farmers-carry"] }
+        ] }
+      ]
+    },
+    {
+      "id": "ppl-endomorph",
+      "name": "Endomorph Push Pull Legs Density",
+      "splitType": "push_pull_legs",
+      "bodyType": "endomorph",
+      "daysPerWeek": 6,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Push Density A", "focus": ["chest", "shoulders", "arms", "core"], "exerciseSlots": [
+          { "slotId": "press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 5 }, "reps": { "min": 6, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 150 }, "candidateExerciseIds": ["dumbbell-bench-press", "machine-chest-press", "barbell-bench-press"] },
+          { "slotId": "incline-or-fly", "primaryMuscle": "chest", "targetZones": ["upper_chest", "inner_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["incline-dumbbell-press", "cable-chest-fly", "pec-deck-fly"] },
+          { "slotId": "delt-density", "primaryMuscle": "shoulders", "targetZones": ["side_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["dumbbell-lateral-raise", "cable-lateral-raise"] },
+          { "slotId": "core-finisher", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 4 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["farmers-carry", "plank"] }
+        ] },
+        { "dayIndex": 2, "name": "Pull Density A", "focus": ["back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "pull-row-pair", "primaryMuscle": "back", "targetZones": ["lats", "mid_back"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["lat-pulldown", "seated-cable-row", "one-arm-dumbbell-row"] },
+          { "slotId": "upper-back-density", "primaryMuscle": "back", "targetZones": ["upper_back"], "mechanics": "isolation", "movementType": "scapular_retraction", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-face-pull"] },
+          { "slotId": "biceps-density", "primaryMuscle": "arms", "targetZones": ["biceps", "brachialis"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 18 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["cable-curl", "dumbbell-hammer-curl"] },
+          { "slotId": "lat-pump", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "isolation", "movementType": "vertical_pull", "sets": { "min": 2, "max": 4 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["straight-arm-pulldown"] }
+        ] },
+        { "dayIndex": 3, "name": "Legs Density A", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "machine-squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["leg-press", "front-squat", "back-squat"] },
+          { "slotId": "posterior-chain", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "leg-accessory-pair", "primaryMuscle": "legs", "targetZones": ["quads", "hamstrings"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["leg-extension", "lying-leg-curl"] },
+          { "slotId": "rotation-core", "primaryMuscle": "core", "targetZones": ["obliques"], "mechanics": "compound", "movementType": "rotation", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-woodchop", "medicine-ball-russian-twist", "pallof-press"] }
+        ] },
+        { "dayIndex": 4, "name": "Push Density B", "focus": ["chest", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "incline-press", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["incline-dumbbell-press", "machine-chest-press"] },
+          { "slotId": "push-up-density", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 20 }, "rpe": { "min": 6.5, "max": 8.5 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["push-up", "chest-dip"] },
+          { "slotId": "shoulder-pair", "primaryMuscle": "shoulders", "targetZones": ["front_delts", "side_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["machine-shoulder-press", "arnold-press", "cable-lateral-raise"] },
+          { "slotId": "triceps-density", "primaryMuscle": "arms", "targetZones": ["triceps_long_head", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_extension", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["triceps-rope-pushdown", "overhead-cable-triceps-extension"] }
+        ] },
+        { "dayIndex": 5, "name": "Pull Density B", "focus": ["back", "arms", "core"], "exerciseSlots": [
+          { "slotId": "supported-row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["chest-supported-machine-row", "seated-cable-row"] },
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["lat-pulldown", "straight-arm-pulldown"] },
+          { "slotId": "curl-density", "primaryMuscle": "arms", "targetZones": ["biceps", "forearms"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-curl", "dumbbell-hammer-curl", "dumbbell-wrist-curl"] },
+          { "slotId": "carry-core", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 5 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["farmers-carry"] }
+        ] },
+        { "dayIndex": 6, "name": "Legs Density B", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "single-leg-density", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 16 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "hip-thrust", "primaryMuscle": "legs", "targetZones": ["glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["barbell-hip-thrust", "romanian-deadlift"] },
+          { "slotId": "calf-accessory", "primaryMuscle": "legs", "targetZones": ["calves"], "mechanics": "isolation", "movementType": "calf_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 25 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["standing-calf-raise"] },
+          { "slotId": "core-circuit", "primaryMuscle": "core", "targetZones": ["rectus_abdominis", "obliques"], "mechanics": "compound", "movementType": "flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 6.5, "max": 8.5 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["weighted-cable-crunch", "cable-woodchop", "side-plank"] }
+        ] }
+      ]
+    },
+    {
+      "id": "upper-lower-ectomorph",
+      "name": "Ectomorph Upper Lower",
+      "splitType": "upper_lower",
+      "bodyType": "ectomorph",
+      "daysPerWeek": 4,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Upper A Heavy", "focus": ["chest", "back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bent-over-row", "seated-cable-row"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["dumbbell-shoulder-press", "machine-shoulder-press"] },
+          { "slotId": "arm-pair", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["barbell-curl", "triceps-rope-pushdown"] }
+        ] },
+        { "dayIndex": 2, "name": "Lower A Heavy", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 3, "max": 4 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat", "leg-press"] },
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "calves", "primaryMuscle": "legs", "targetZones": ["calves"], "mechanics": "isolation", "movementType": "calf_raise", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["standing-calf-raise"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "isolation", "movementType": "anti_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 6, "max": 8 }, "restSeconds": { "min": 60, "max": 90 }, "candidateExerciseIds": ["plank", "dead-bug"] }
+        ] },
+        { "dayIndex": 3, "name": "Upper B Moderate", "focus": ["chest", "back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "incline", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["incline-dumbbell-press", "incline-barbell-bench-press"] },
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+          { "slotId": "side-rear-delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts", "rear_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 2, "max": 3 }, "reps": { "min": 12, "max": 18 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["dumbbell-lateral-raise", "reverse-pec-deck-fly"] },
+          { "slotId": "triceps", "primaryMuscle": "arms", "targetZones": ["triceps_long_head"], "mechanics": "isolation", "movementType": "elbow_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["overhead-cable-triceps-extension", "ez-bar-skullcrusher"] }
+        ] },
+        { "dayIndex": 4, "name": "Lower B Moderate", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "single-leg", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "leg-curl", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "isolation", "movementType": "leg_curl", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["lying-leg-curl"] },
+          { "slotId": "leg-extension", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["leg-extension"] },
+          { "slotId": "anti-rotation", "primaryMuscle": "core", "targetZones": ["obliques"], "mechanics": "isolation", "movementType": "anti_rotation", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 6, "max": 8 }, "restSeconds": { "min": 60, "max": 90 }, "candidateExerciseIds": ["pallof-press", "side-plank"] }
+        ] }
+      ]
+    },
+    {
+      "id": "upper-lower-mesomorph",
+      "name": "Mesomorph Upper Lower",
+      "splitType": "upper_lower",
+      "bodyType": "mesomorph",
+      "daysPerWeek": 4,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Upper Strength", "focus": ["chest", "back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 240 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 5, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 240 }, "candidateExerciseIds": ["barbell-bent-over-row", "chest-supported-machine-row"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["barbell-overhead-press", "dumbbell-shoulder-press"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["barbell-curl", "triceps-rope-pushdown"] }
+        ] },
+        { "dayIndex": 2, "name": "Lower Strength", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat"] },
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 5, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 240 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "accessory", "primaryMuscle": "legs", "targetZones": ["quads", "hamstrings"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["leg-extension", "lying-leg-curl"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["rectus_abdominis"], "mechanics": "compound", "movementType": "anti_extension", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["ab-wheel-rollout", "plank"] }
+        ] },
+        { "dayIndex": 3, "name": "Upper Hypertrophy", "focus": ["chest", "back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "incline", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["incline-dumbbell-press", "machine-chest-press"] },
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+          { "slotId": "delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts", "rear_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["dumbbell-lateral-raise", "reverse-pec-deck-fly"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_long_head"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["incline-dumbbell-curl", "overhead-cable-triceps-extension"] }
+        ] },
+        { "dayIndex": 4, "name": "Lower Hypertrophy", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "leg-press", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["leg-press", "front-squat"] },
+          { "slotId": "lunge", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "calves", "primaryMuscle": "legs", "targetZones": ["calves"], "mechanics": "isolation", "movementType": "calf_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["standing-calf-raise"] },
+          { "slotId": "rotation", "primaryMuscle": "core", "targetZones": ["obliques"], "mechanics": "compound", "movementType": "rotation", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["cable-woodchop", "pallof-press"] }
+        ] }
+      ]
+    },
+    {
+      "id": "upper-lower-endomorph",
+      "name": "Endomorph Upper Lower Density",
+      "splitType": "upper_lower",
+      "bodyType": "endomorph",
+      "daysPerWeek": 4,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Upper A Density", "focus": ["chest", "back", "shoulders", "arms", "core"], "exerciseSlots": [
+          { "slotId": "press-density", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["dumbbell-bench-press", "machine-chest-press"] },
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["lat-pulldown", "pull-up"] },
+          { "slotId": "delts-density", "primaryMuscle": "shoulders", "targetZones": ["side_delts", "rear_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-lateral-raise", "reverse-pec-deck-fly"] },
+          { "slotId": "carry", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 5 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["farmers-carry"] }
+        ] },
+        { "dayIndex": 2, "name": "Lower A Density", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "leg-press", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["leg-press", "front-squat"] },
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "accessory-pair", "primaryMuscle": "legs", "targetZones": ["quads", "hamstrings"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["leg-extension", "lying-leg-curl"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["obliques"], "mechanics": "compound", "movementType": "rotation", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-woodchop", "side-plank"] }
+        ] },
+        { "dayIndex": 3, "name": "Upper B Density", "focus": ["chest", "back", "shoulders", "arms"], "exerciseSlots": [
+          { "slotId": "incline-density", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["incline-dumbbell-press", "machine-chest-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["chest-supported-machine-row", "one-arm-dumbbell-row"] },
+          { "slotId": "arm-density", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-curl", "triceps-rope-pushdown", "dumbbell-hammer-curl"] },
+          { "slotId": "rear-delts", "primaryMuscle": "shoulders", "targetZones": ["rear_delts"], "mechanics": "isolation", "movementType": "rear_delt_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["reverse-pec-deck-fly", "bent-over-rear-delt-raise"] }
+        ] },
+        { "dayIndex": 4, "name": "Lower B Density", "focus": ["legs", "core"], "exerciseSlots": [
+          { "slotId": "single-leg", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 16 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "posterior", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["barbell-hip-thrust", "romanian-deadlift"] },
+          { "slotId": "calves", "primaryMuscle": "legs", "targetZones": ["calves"], "mechanics": "isolation", "movementType": "calf_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 25 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["standing-calf-raise"] },
+          { "slotId": "flexion-core", "primaryMuscle": "core", "targetZones": ["rectus_abdominis"], "mechanics": "compound", "movementType": "flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["weighted-cable-crunch", "hanging-knee-raise"] }
+        ] }
+      ]
+    },
+    {
+      "id": "full-body-ectomorph",
+      "name": "Ectomorph Full Body",
+      "splitType": "full_body",
+      "bodyType": "ectomorph",
+      "daysPerWeek": 3,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Full Body A Strength Skill", "focus": ["legs", "chest", "back", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 3, "max": 4 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat", "leg-press"] },
+          { "slotId": "press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 5, "max": 8 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["seated-cable-row", "barbell-bent-over-row"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "isolation", "movementType": "anti_extension", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 6, "max": 8 }, "restSeconds": { "min": 60, "max": 90 }, "candidateExerciseIds": ["dead-bug", "plank"] }
+        ] },
+        { "dayIndex": 2, "name": "Full Body B Hypertrophy Skill", "focus": ["legs", "shoulders", "back", "arms"], "exerciseSlots": [
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["dumbbell-shoulder-press", "machine-shoulder-press"] },
+          { "slotId": "vertical-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 2, "max": 3 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["barbell-curl", "triceps-rope-pushdown"] }
+        ] },
+        { "dayIndex": 3, "name": "Full Body C Volume Skill", "focus": ["legs", "chest", "back", "shoulders"], "exerciseSlots": [
+          { "slotId": "single-leg", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "incline-press", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 2, "max": 3 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["incline-dumbbell-press", "machine-chest-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["one-arm-dumbbell-row", "chest-supported-machine-row"] },
+          { "slotId": "delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts", "rear_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 2, "max": 3 }, "reps": { "min": 12, "max": 18 }, "rpe": { "min": 7, "max": 8 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["dumbbell-lateral-raise", "reverse-pec-deck-fly"] }
+        ] }
+      ]
+    },
+    {
+      "id": "full-body-mesomorph",
+      "name": "Mesomorph Full Body",
+      "splitType": "full_body",
+      "bodyType": "mesomorph",
+      "daysPerWeek": 3,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Full Body A Heavy", "focus": ["legs", "chest", "back", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 180, "max": 240 }, "candidateExerciseIds": ["back-squat", "front-squat"] },
+          { "slotId": "press", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 4, "max": 5 }, "reps": { "min": 4, "max": 8 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 240 }, "candidateExerciseIds": ["barbell-bench-press", "dumbbell-bench-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 4, "max": 5 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["barbell-bent-over-row", "chest-supported-machine-row"] },
+          { "slotId": "core", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 4 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["farmers-carry", "plank"] }
+        ] },
+        { "dayIndex": 2, "name": "Full Body B Moderate", "focus": ["legs", "shoulders", "back", "arms"], "exerciseSlots": [
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7.5, "max": 9 }, "restSeconds": { "min": 150, "max": 210 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 6, "max": 10 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 120, "max": 180 }, "candidateExerciseIds": ["barbell-overhead-press", "dumbbell-shoulder-press"] },
+          { "slotId": "pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["pull-up", "lat-pulldown"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_long_head"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 60, "max": 105 }, "candidateExerciseIds": ["incline-dumbbell-curl", "overhead-cable-triceps-extension"] }
+        ] },
+        { "dayIndex": 3, "name": "Full Body C Hypertrophy", "focus": ["legs", "chest", "back", "shoulders", "core"], "exerciseSlots": [
+          { "slotId": "single-leg", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "incline", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["incline-dumbbell-press", "machine-chest-press"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 90, "max": 150 }, "candidateExerciseIds": ["seated-cable-row", "one-arm-dumbbell-row"] },
+          { "slotId": "delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 4 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 45, "max": 90 }, "candidateExerciseIds": ["cable-lateral-raise", "dumbbell-lateral-raise"] }
+        ] }
+      ]
+    },
+    {
+      "id": "full-body-endomorph",
+      "name": "Endomorph Full Body Density",
+      "splitType": "full_body",
+      "bodyType": "endomorph",
+      "daysPerWeek": 4,
+      "trainingDays": [
+        { "dayIndex": 1, "name": "Full Body Density A", "focus": ["legs", "chest", "back", "core"], "exerciseSlots": [
+          { "slotId": "squat", "primaryMuscle": "legs", "targetZones": ["quads"], "mechanics": "compound", "movementType": "squat", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["leg-press", "front-squat", "back-squat"] },
+          { "slotId": "press-density", "primaryMuscle": "chest", "targetZones": ["mid_chest"], "mechanics": "compound", "movementType": "horizontal_push", "sets": { "min": 4, "max": 5 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["dumbbell-bench-press", "machine-chest-press"] },
+          { "slotId": "lat-pull", "primaryMuscle": "back", "targetZones": ["lats"], "mechanics": "compound", "movementType": "vertical_pull", "sets": { "min": 3, "max": 4 }, "reps": { "min": 10, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["lat-pulldown", "straight-arm-pulldown"] },
+          { "slotId": "core-carry", "primaryMuscle": "core", "targetZones": ["transverse_abdominis"], "mechanics": "compound", "movementType": "carry", "sets": { "min": 3, "max": 5 }, "reps": { "min": 30, "max": 60 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["farmers-carry"] }
+        ] },
+        { "dayIndex": 2, "name": "Full Body Density B", "focus": ["legs", "shoulders", "back", "arms"], "exerciseSlots": [
+          { "slotId": "hinge", "primaryMuscle": "legs", "targetZones": ["hamstrings", "glutes"], "mechanics": "compound", "movementType": "hip_hinge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 75, "max": 135 }, "candidateExerciseIds": ["romanian-deadlift", "barbell-hip-thrust"] },
+          { "slotId": "vertical-press", "primaryMuscle": "shoulders", "targetZones": ["front_delts"], "mechanics": "compound", "movementType": "vertical_push", "sets": { "min": 3, "max": 4 }, "reps": { "min": 8, "max": 12 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["machine-shoulder-press", "dumbbell-shoulder-press"] },
+          { "slotId": "upper-back", "primaryMuscle": "back", "targetZones": ["upper_back"], "mechanics": "isolation", "movementType": "scapular_retraction", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-face-pull"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_lateral_medial"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-curl", "triceps-rope-pushdown"] }
+        ] },
+        { "dayIndex": 3, "name": "Full Body Density C", "focus": ["legs", "chest", "back", "core"], "exerciseSlots": [
+          { "slotId": "lunge", "primaryMuscle": "legs", "targetZones": ["glutes", "quads"], "mechanics": "compound", "movementType": "lunge", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 16 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["dumbbell-walking-lunge", "bulgarian-split-squat"] },
+          { "slotId": "incline", "primaryMuscle": "chest", "targetZones": ["upper_chest"], "mechanics": "compound", "movementType": "incline_push", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["incline-dumbbell-press", "push-up"] },
+          { "slotId": "row", "primaryMuscle": "back", "targetZones": ["mid_back"], "mechanics": "compound", "movementType": "horizontal_pull", "sets": { "min": 3, "max": 5 }, "reps": { "min": 8, "max": 15 }, "rpe": { "min": 7, "max": 8.5 }, "restSeconds": { "min": 60, "max": 120 }, "candidateExerciseIds": ["chest-supported-machine-row", "one-arm-dumbbell-row"] },
+          { "slotId": "rotation", "primaryMuscle": "core", "targetZones": ["obliques"], "mechanics": "compound", "movementType": "rotation", "sets": { "min": 3, "max": 5 }, "reps": { "min": 10, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-woodchop", "medicine-ball-russian-twist"] }
+        ] },
+        { "dayIndex": 4, "name": "Full Body Density D", "focus": ["legs", "shoulders", "arms", "core"], "exerciseSlots": [
+          { "slotId": "machine-leg", "primaryMuscle": "legs", "targetZones": ["quads", "hamstrings"], "mechanics": "isolation", "movementType": "leg_extension", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["leg-extension", "lying-leg-curl", "standing-calf-raise"] },
+          { "slotId": "delts", "primaryMuscle": "shoulders", "targetZones": ["side_delts", "rear_delts"], "mechanics": "isolation", "movementType": "lateral_raise", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["cable-lateral-raise", "reverse-pec-deck-fly"] },
+          { "slotId": "arms", "primaryMuscle": "arms", "targetZones": ["biceps", "triceps_long_head"], "mechanics": "isolation", "movementType": "elbow_flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 7, "max": 9 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["dumbbell-hammer-curl", "overhead-cable-triceps-extension"] },
+          { "slotId": "flexion-core", "primaryMuscle": "core", "targetZones": ["rectus_abdominis"], "mechanics": "compound", "movementType": "flexion", "sets": { "min": 3, "max": 5 }, "reps": { "min": 12, "max": 20 }, "rpe": { "min": 6.5, "max": 8 }, "restSeconds": { "min": 30, "max": 75 }, "candidateExerciseIds": ["weighted-cable-crunch", "hanging-knee-raise", "ab-wheel-rollout"] }
+        ] }
+      ]
+    }
+  ]
+}
