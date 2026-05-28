@@ -2,11 +2,11 @@
   "name": "workspace",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "build": "tsc --project tsconfig.json",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "start": "node dist/index.js",
+    "start": "node dist/src/index.js",
     "test": "vitest run",
     "start:expo-web": "CI=1 expo start --web --host localhost --port 8081"
   },

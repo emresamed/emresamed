@@ -14,6 +14,12 @@ type OnboardingListener = (state: OnboardingState) => void;
 
 const minimumDays = 2;
 const maximumDays = 6;
+const deepClone = <T>(value: T): T => {
+  if (typeof globalThis.structuredClone === "function") {
+    return globalThis.structuredClone(value);
+  }
+  return JSON.parse(JSON.stringify(value)) as T;
+};
 
 export class OnboardingStore {
   private state: OnboardingState = {
@@ -25,7 +31,7 @@ export class OnboardingStore {
   private listeners = new Set<OnboardingListener>();
 
   getState(): OnboardingState {
-    return structuredClone(this.state);
+    return deepClone(this.state);
   }
 
   subscribe(listener: OnboardingListener): () => void {
@@ -73,11 +79,11 @@ export class OnboardingStore {
     const completedDraft = this.state.draft as UserMetrics;
     this.state = {
       status: "completed",
-      draft: structuredClone(completedDraft),
+      draft: deepClone(completedDraft),
       errors: []
     };
     this.emit();
-    return structuredClone(completedDraft);
+    return deepClone(completedDraft);
   }
 
   reset(): void {
